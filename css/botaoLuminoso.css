@@ -1,0 +1,208 @@
+/* CSS Botão Luminoso - Site Projeto Curriculo */
+/* Aqui estão os DOIS BOTÕES LUMINOSOS do Site
+1 - NO TOPO
+2 - NO RODAPÉ
+ */
+
+/* Botão do TOPO */
+.botaoLuminoso {
+    position: relative; /* será responsivo */
+    background: #444; /* cor de fundo do Botão */
+    color: goldenrod; /* cor da Fonte dentro do Botão */
+    text-decoration: none; /* retira o sublinhado dos botões clicáveis, que vem por padrão */
+    text-transform: uppercase; /* Caixa Alta */
+    font-size: 1.8em; /* aumenta o tamanho da Fonte */
+    letter-spacing: 0.1em; /* espaçamento entre as cada Letra dentro do Botão */
+    padding: 10px 40px;  /* 10px = espaçamento das margens Superior/Inferior
+                            40px = espaçamento entre margem Direita/Esquerda em relação ao Texto */
+    transition: 0.5s; /* tempo de animação quando o mouse for colocado em cima do Botão */
+    /* border-radius: 10px; */ /* arredondamento das bordas */
+    font-weight: 700; /* faz com que o texto fique com aparência de NEGRITO */
+}
+
+.botaoLuminoso:hover {
+    letter-spacing: 0.25em; /* espaçamento/animação que expandirá o Botão quando o mouse for posicionado
+                            acima dele (MUITO LEGAL ISSO) */
+    background: var(--clr); /* var(--clr) faz a MÁGICA ACONTECER, a Linha em volta do Botão
+                            e em cima dos QUADRADINHOS ficará com BRILHO */
+    color: var(--clr); /* var(--clr) faz a MÁGICA ACONTECER, a COR do Texto dentro do Botão ficará com BRILHO */
+    box-shadow: 0 0 35px var(--clr); /* var(--clr) faz a MÁGICA ACONTECER, a Sombra no Botão ficará com BRILHO */
+    text-decoration: none; /* retira o sublinhado dos botões clicáveis, que vem por padrão */
+    transform: translateX(-10%); /* faz o hover mover o Botão pra ambos os Lados */
+    margin-left: -10px; /* margem NEGATIVA ajuda o comando "transform: translateX(-10%)" funcionar 
+                           o Botão irá se expandir pra ambos os Lados */
+}
+
+.botaoLuminoso::before {
+    content: ""; /* espaço reservado para Texto, fica vazio apenas para funcionar */
+    position: absolute; /* Botão terá posição fixa */
+    inset: 2px; /* expessura do LINHA/BRILHO que aparecerá quando o mouse for posicionado em cima do Botão */
+    background: #27282c; /* cor de fundo do Botão */
+    /* border-radius: 10px; */ /* arredondamento das bordas do Botão */
+}
+
+.botaoLuminoso span {
+    position: relative; /* será responsivo */
+    z-index: 1;
+}
+
+.botaoLuminoso i { /* a tag <i> serve para criar um QUADRADINHO em cima do Botão */
+    position: absolute; /* QUADRADINHO terá posição fixa em cima do Botão */
+    inset: 2px; /* posiciona o QUADRADINHO em cima da linha no Botão, 
+                e irá correr de um lado pro outro quando o mouse for posicionado sobre ele */
+    display: block; /* QUADRADINHO em cima do Botão ficará fixo */
+}
+
+.botaoLuminoso i::before { /* a tag <i> serve para criar um QUADRADINHO em cima do Botão */
+    content: ""; /* espaço reservado para Texto, fica vazio apenas para funcionar */
+    top: -3.5px; /* QUADRADINHO em cima do Botão */
+    left: 80%; /* QUADRADINHO em cima do Botão voltará pra Direita */
+    width: 10px; /* largura que o QUADRADINHO terá em cima do Botão */
+    height: 5px; /* altura que o QUADRADINHO terá em cima do Botão */
+    border: 2px solid var(--clr); /* 2px = forma Bordas ao redor do QUADRADINHO
+                                   solid = o QUADRADINHO será vazado, se 'solid' for retirado o QUADRADINHO fica parecendo um BOX
+                              var(--clr) = faz a MÁGICA ACONTECER, a Sombra no Botão ficará com BRILHO */
+    position: absolute; /* QUADRADINHO terá posição absoluta sempre em cima da Botão */
+    background: #27282c; /* cor de fundo dentro do QUADRADINHO */
+    transition: 0.5s; /* tempo de animação quando o mouse for colocado em cima do Botão */
+    transform: translateX(-50%); /* QUADRADINHO acima do Botão vai rolar da Direita para Esquerda */
+}
+
+.botaoLuminoso:hover i::before {
+    width: 20px; /* largura que o QUADRADINHO terá em cima do Botão quando for expandido no HOVER */
+    left: 20%; /* o QUADRADINHO vai voltar da Direita pra Esquerda em cima do Botão 
+                  se for colocado 50%, por exemplo, o QUADRADINHO vai parar no meio do Botão */
+}
+
+.botaoLuminoso i::after {
+    content: ""; /* espaço reservado para Texto, fica vazio apenas para funcionar */
+    bottom: -3.5px; /* cria um QUADRADINHO embaixo do Botão */
+    left: 20%; /* QUADRADINHO embaixo do Botão voltará pra Esquerda */
+    width: 10px; /* largura que o QUADRADINHO terá em cima do Botão */
+    height: 5px; /* altura que o QUADRADINHO terá em cima do Botão */
+    border: 2px solid var(--clr); /* 2px = forma Bordas ao redor do QUADRADINHO
+                                   solid = o QUADRADINHO será vazado, se 'solid' for retirado o QUADRADINHO fica parecendo um BOX
+                              var(--clr) = faz a MÁGICA ACONTECER, a Sombra no Botão ficará com BRILHO */
+    position: absolute; /* QUADRADINHO terá posição absoluta sempre em cima da Botão */
+    background: #27282c; /* cor de fundo dentro do QUADRADINHO */
+    transition: 0.5s; /* tempo de animação */
+    transform: translateX(-50%); /* QUADRADINHO abaixo do Botão vai rolar da Esquerda para  Direita */
+}
+
+.botaoLuminoso:hover i::after {
+    width: 20px; /* largura que o QUADRADINHO terá embaixo do Botão quando for expandido no HOVER */
+    left: 80%; /* o QUADRADINHO vai voltar da Esquerda pra Direita embaixo do Botão 
+                  se for colocado 50%, por exemplo, o QUADRADINHO vai parar no meio do Botão */
+}
+
+/* ============================================================== */
+/* Botão do RODPÉ */
+
+.botaoLuminosoRodape {
+    position: relative; /* será responsivo */
+    background: #444; /* cor de fundo do Botão */
+    color: rgb(11, 212, 128); /* cor da Fonte dentro do Botão */
+    text-decoration: none; /* retira o sublinhado dos botões clicáveis, que vem por padrão */
+    text-transform: uppercase; /* Caixa Alta */
+    font-size: small; /* tamanho da Fonte */
+    letter-spacing: 0.1em; /* espaçamento entre cada Letra dentro do Botão */
+    padding: 10px 20px;  /* 10px = espaçamento das margens Superior/Inferior
+                            20px = espaçamento entre margem Direita/Esquerda em relação ao Texto */
+    transition: 0.5s; /* tempo de animação quando o mouse for colocado em cima do Botão */
+    border-radius: 20px; /* arredondamento das bordas */
+}
+
+.botaoLuminosoRodape:hover {
+    letter-spacing: 0.25em; /* espaçamento/animação que expandirá o Botão quando o mouse for posicionado
+                            acima dele (MUITO LEGAL ISSO) */
+    background: var(--clr); /* var(--clr) faz a MÁGICA ACONTECER, a Linha em volta do Botão
+                            e em cima dos QUADRADINHOS ficará com BRILHO */
+    color: var(--clr); /* var(--clr) faz a MÁGICA ACONTECER, a COR do Texto dentro do Botão ficará com BRILHO */
+    box-shadow: 0 0 35px var(--clr); /* var(--clr) faz a MÁGICA ACONTECER, a Sombra no Botão ficará com BRILHO */
+    text-decoration: none; /* retira o sublinhado dos botões clicáveis, que vem por padrão */
+}
+
+.botaoLuminosoRodape::before {
+    content: ""; /* espaço reservado para Texto, fica vazio apenas para funcionar */
+    position: absolute; /* Botão terá posição fixa */
+    inset: 2px; /* expessura do LINHA/BRILHO que aparecerá quando o mouse for posicionado em cima do Botão */
+    background: #27282c; /* cor de fundo do Botão */
+    border-radius: 20px; /* arredondamento das bordas do Botão */
+}
+
+.botaoLuminosoRodape span {
+    position: relative; /* será responsivo */
+    z-index: 1;
+}
+
+.botaoLuminosoRodape i { /* a tag <i> serve para criar um QUADRADINHO em cima do Botão */
+    position: absolute; /* QUADRADINHO terá posição fixa em cima do Botão */
+    inset: 2px; /* posiciona o QUADRADINHO em cima da linha no Botão, 
+                e irá correr de um lado pro outro quando o mouse for posicionado sobre ele */
+    display: block; /* QUADRADINHO em cima do Botão ficará fixo */
+}
+
+.botaoLuminosoRodape i::before { /* a tag <i> serve para criar um QUADRADINHO em cima do Botão */
+    content: ""; /* espaço reservado para Texto, fica vazio apenas para funcionar */
+    top: -3.5px; /* QUADRADINHO em cima do Botão */
+    left: 80%; /* QUADRADINHO em cima do Botão voltará pra Direita */
+    width: 10px; /* largura que o QUADRADINHO terá em cima do Botão */
+    height: 5px; /* altura que o QUADRADINHO terá em cima do Botão */
+    border: 2px solid var(--clr); /* 2px = forma Bordas ao redor do QUADRADINHO
+                                   solid = o QUADRADINHO será vazado, se 'solid' for retirado o QUADRADINHO fica parecendo um BOX
+                              var(--clr) = faz a MÁGICA ACONTECER, a Sombra no Botão ficará com BRILHO */
+    position: absolute; /* QUADRADINHO terá posição absoluta sempre em cima da Botão */
+    background: #27282c; /* cor de fundo dentro do QUADRADINHO */
+    transition: 0.5s; /* tempo de animação quando o mouse for colocado em cima do Botão */
+    transform: translateX(-50%); /* QUADRADINHO acima do Botão vai rolar da Direita para Esquerda */
+}
+
+.botaoLuminosoRodape:hover i::before {
+    width: 20px; /* largura que o QUADRADINHO terá em cima do Botão quando for expandido no HOVER */
+    left: 20%; /* o QUADRADINHO vai voltar da Direita pra Esquerda em cima do Botão 
+                  se for colocado 50%, por exemplo, o QUADRADINHO vai parar no meio do Botão */
+}
+
+.botaoLuminosoRodape i::after {
+    content: ""; /* espaço reservado para Texto, fica vazio apenas para funcionar */
+    bottom: -3.5px; /* cria um QUADRADINHO embaixo do Botão */
+    left: 20%; /* QUADRADINHO embaixo do Botão voltará pra Esquerda */
+    width: 10px; /* largura que o QUADRADINHO terá em cima do Botão */
+    height: 5px; /* altura que o QUADRADINHO terá em cima do Botão */
+    border: 2px solid var(--clr); /* 2px = forma Bordas ao redor do QUADRADINHO
+                                   solid = o QUADRADINHO será vazado, se 'solid' for retirado o QUADRADINHO fica parecendo um BOX
+                              var(--clr) = faz a MÁGICA ACONTECER, a Sombra no Botão ficará com BRILHO */
+    position: absolute; /* QUADRADINHO terá posição absoluta sempre em cima da Botão */
+    background: #27282c; /* cor de fundo dentro do QUADRADINHO */
+    transition: 0.5s; /* tempo de animação */
+    transform: translateX(-50%); /* QUADRADINHO abaixo do Botão vai rolar da Esquerda para  Direita */
+}
+
+.botaoLuminosoRodape:hover i::after {
+    width: 20px; /* largura que o QUADRADINHO terá embaixo do Botão quando for expandido no HOVER */
+    left: 80%; /* o QUADRADINHO vai voltar da Esquerda pra Direita embaixo do Botão 
+                  se for colocado 50%, por exemplo, o QUADRADINHO vai parar no meio do Botão */
+}
+
+
+  
+/* Os comandos abaixo funcionam quando a Tela for minimizada, ficam responsivos */
+@media all and (max-width: 980px) { 
+    .botaoLuminosoRodape{
+        font-size:xx-small;
+    }
+ }
+ 
+
+/* ================================================================================
+Abaixo, CSS do antigo Botão 'Meu Primeiro Site' que substituí pelo Botão Luminoso Acima */
+.botao-primeiro-site {
+    min-width: 170px; /* largura mínima que os Botões terão */
+    min-height: 38px; /* altura dos botões abaixo da Foto de Perfil */
+    border-radius: 20px; /* arredondamento das bordas */
+    color: rgb(0, 255, 149); /* cor da Fonte */
+    padding-inline: 0; /* retira os espaçamentos dentro do Botão, fazendo o Texto ficar centralizado dentro dele */
+    text-transform: uppercase; /* Caixa Alta */
+    object-fit: cover; /* aumenta o tamanho do Botão de acordo com o Texto digitado nele */
+    font-size: 15px; /* tamanho da Fonte do Menu */
+}

@@ -1,0 +1,333 @@
+/* CSS Estilos - Site Projeto Curriculo */
+
+* { margin: 0; padding: 0; } /* zera margens superior/inferior/laterais de todo o site */
+
+p {
+    font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif; /* fonte das letras em todo o website */
+}
+
+.col-xs-12 { 
+    color: white; /* cor da Fonte no Primero Parágrafo */
+    font-size: larger;  /* aumenta o tamanho da Fonte */
+	text-shadow: 0 0 15px black; /* efeito sombreado */
+    font-weight: 700; /* efeito Negrito sobre a Fonte */
+}
+
+.jumbotron { /* por padrão, essa Classe tem 10px de espaçamento superior entre cada Section/Container */
+    margin-bottom: 0px; /* portanto, a margem superior padrão foi zerada */
+    border-radius: 0%; /* retira o arredondamento nas bordas */
+    margin-top: -30px; /* define um valor NEGATIVO para o Menu de Navegação entre Páginas ficar abaixo do Paralaxx */
+    /* background: #ece7d5; */ /* como padrão a Classe jumbotron tem cor Cinza-claro, a cor ao lado altera isso */
+}
+
+body, html { /* a função "Rolagem Suave" não funciona no Microsoft Edge (antigo Internet Explorer) */   
+    scroll-behavior: smooth; /* suaviza a rolagem em todo o site, quando o Menu (Projetos/Certificados/Sobre mim/Contato) for clicado */
+    overflow-x: hidden; /* evita que o conteúdo extrapole as margens */
+}
+
+.dataAtual {
+    color: rgb(109, 104, 104); /* padroniza a cor CINZA para Data (Dia da Semana), acima da Foto de Perfil */
+}
+
+.horaAtual {
+    background-color: rgb(230, 218, 218); /* cor de fundo da Hora Atual */
+    color: rgb(94, 88, 88); /* padroniza a cor CINZA para da Hora Atual, acima da Foto de Perfil */
+    text-align: center; /* alinhamento central dos Números da Hora Atual */
+    font-size: 18px; /* tamanho da fonte dentro da Hora Atual */ 
+    border-radius: 5px; /* efeito arredondado nas bordas da Hora Atual  */
+    width: 90px; /* largura do box da Hora Atual  */
+    padding-top: 0px; /* espaçamento entre o texto e a borda superior do box */
+    padding-bottom: 0px; /* espaçamento entre o texto e a borda inferior do box */
+}
+
+.botaoMenu {
+    background-color: rgb(99, 159, 238); /* cor de fundo dos Botões do Menu */
+    color: white !important; /* cor da fonte */
+    text-align: center; /* alinhamento central das Fontes */
+    margin: 3px; /* define espaçamento igual entre todas as margens */ 
+    font-size: 15px; /* tamanho da fonte dentro dos Botões do Menu */ 
+    border-radius: 5px; /* efeito arredondado nas bordas dos Botões do Menu */
+    width: 105px; /* largura dos Botões do Menu */
+    padding-top: 3px; /* espaçamento entre o texto e a borda superior dos Botões do Menu */
+    padding-bottom: 3px; /* espaçamento entre o texto e a borda inferior dos Botões do Menu */
+    transition: .4s; /* tempo que levará para APARECER/DESAPARECER a cor dos Botões do Menu
+                        quando o mouse for posicionado sobre eles */
+    box-shadow: 0px 0px 5px goldenrod, 2px 2px 2px 0px #858585; /* 0px = sombra Lado Direito do Botão
+                                                                        0px = altura da sombra abaixo do Botão
+                                                                        5px = esfumaçamento da sombra ao redor do Botão
+                                                                        2px = sombra do Lado Direito do Botão
+                                                                        2px = altura da sombra abaixo do Botão
+                                                                        2px = esfumaçamento da sombra ao redor do Botão
+                                                                        0px = altura do esfumaçamento abaixo do Botão */
+}
+
+.botaoMenu:hover { /* animação/flutuar dos Botões do Menu */
+    color: white !important; /* cor da fonte */
+    background-color: rgb(109, 104, 104); /* quando o mouse for posicionado em cima dos Botões eles mudarão de cor */
+    font-weight: 700; /* faz com que o texto fique com aparência de NEGRITO, quanto maior o número, mas NEGRITO ficará */
+    transition: .4s; /* tempo que levará para APARECER/DESAPARECER a cor dos Botões do Menu
+                        quando o mouse for posicionado sobre eles */
+}
+
+.foto-perfil { 
+    position: relative; /* a foto irá se adaptar ao tamanho da Tela */
+    height: auto; /* altura máxima da foto */
+    max-width: 60%; /* largura da foto será automátima (responsiva), vai se adaptar a tela quando for minimizada
+                    Obs.: este percentual varia de acordo com o tamanho em que a foto for salva. Exemplo: se você
+                    salvar uma Foto Perfil qua ocupa tota a Tela quando você a abrir, essa foto ficará muito grande
+                    dentro do site, portanto é necessário ajustar esta grande proporção para menos, ou seja, 25%
+                    30% de largura máxima */
+    border-radius: 50%; /* deixa a foto totalmente redonda */
+    box-shadow: 0 0 10px black; /* efeito sombreado ao redor da foto, causa a impressão da Foto de Perfil estar flutuando */ 
+    margin-left: 90px; /* centraliza Foto de Perfil dentro do Box */
+    margin-top: 90px; /* espaçamento entre a Foto de Perfil e Menu/Data/Hora Atual */
+    transition: .9s ease-in-out; /* causa uma impressão visual "de flutuação" quando o mouse for colocado sobre o video 
+                                 "ease-in-out" especifica um efeito de transição com início lento, depois rápido, depois termina lento */
+}
+
+.foto-perfil:hover { /* animação/flutuar que expande a Foto na Tela quando o curso/mouse for posicionado sobre ela */
+    -moz-transform: scale(1.07); /* garante o funcionamento no aumento de tamanho da Foto para Mozilla */
+    -webkit-transform: scale(1.07); /* garante o funcionamento no aumento de tamanho da Foto para Chrome e Safari */
+    transform: scale(1.07); /* aumenta o tamanho da Foto original em uma escala de 1.07 a mais */
+    -moz-transition: -moz-transform 0.9s; /* garante o funcionamento "de transição na flutuação" da Foto para Mozilla */
+    -webkit-transition: -webkit-transform .9s ease; /* garante o funcionamento "de transição na flutuação" da Foto para Chrome e Safari */
+    transition: .9s ease-in-out; /* causa uma impressão visual "de flutuação" quando o mouse for colocado sobre o video 
+                                 "ease-in-out" especifica um efeito de transição com início lento, depois rápido, depois termina lento */
+    box-shadow: 0 0 50px rgb(34, 109, 207); /* efeito sombreado ao redor da foto, causa a impressão da Foto de Perfil estar flutuando */ 
+}
+
+.text-primary {
+    font-weight: 800; /* faz com que o texto fique com aparência de NEGRITO, quanto maior o número, mas NEGRITO ficará */
+}
+
+.navegar-entre-paginas {
+    background-color: rgb(230, 218, 218) !important; /* cor de fundo da Hora Atual */
+    color: rgb(94, 88, 88) bold !important; /* cor da fonte */
+    text-align: center; /* alinhamento central das Fontes */
+    font-size: 12px; /*  tamanho da fonte dentro dos Botões que Navegam entre as Páginas  */ 
+    margin: 2px; /* define espaçamento igual entre todas as margens entre os Botões do Menu */ 
+    border-radius: 5px; /* efeito arredondado nas bordas dos Botões do Menu */
+    width: 100px; /* largura dos Botões do Menu */
+    padding-top: 2px; /* espaçamento entre o texto e a borda superior do Botões do Menu */
+    padding-bottom: 2px; /* espaçamento entre o texto e a borda inferior do Botões do Menu */
+    text-transform: uppercase; /* coloca a fonte em Caixa Alta */
+
+    /* ABAIXO, outra opção para os Botões de Navegação entre Páginas (Transparentes) */
+    /* background-color: transparent;  *//* cor de fundo do transparente */
+    /* color: blue !important;  *//* cor da fonte */
+    /* border: 1px solid; bordas */ /* ao redor dos Botões, será da mesma cor que em 'color: blue' */
+}
+
+.navegar-entre-paginas:hover { /* animação/flutuar dos Botões do Menu */
+    background-color: rgb(109, 104, 104); /* quando o mouse for posicionado em cima dos Botões eles mudarão de cor */
+    font-weight: 800; /* faz com que o texto fique com aparência de NEGRITO, quanto maior o número, mas NEGRITO ficará */
+}
+
+.boxHistoricoProfissional {
+    width: 330px; /* largura da Foto dentro do Box Histórico Profissional */
+    height: 330px; /* altura da Foto dentro do Box Histórico Profissional */
+    margin: -20px; /* retira os espaços vazios das Fotos nos lados direito/esquerdo do Box Histórico Profissional */
+}
+
+.titulos {
+    color: rgb(24, 173, 231); /* cor da fonte */
+    font-weight: 800; /* faz com que o texto fique com aparência de NEGRITO, quanto maior o número, mas NEGRITO ficará */
+    font-size: 60px; /* tamanho da fonte, para todos os Titulos (Histórico/Formação/Certificados etc) */
+    text-shadow: 0 0 2px rgb(82, 80, 80); /* efeito sombreado ao redor do texto */
+    margin-left: -20px; /* alinha o Título à esquerda */
+    margin-top: -50px; /* espaçamento entre o Título e o primeiro parágrafo */
+    padding-bottom: 20px; /* espaçamento entre o Título e o primeiro parágrafo */
+    text-transform: uppercase; /* deixa todos os Títulos em Caixa Alta */
+}
+
+.texto-abaixo-dos-titulos {
+    text-transform: uppercase;
+    font-weight: 800; /* faz com que o texto fique com aparência de NEGRITO, quanto maior o número, mas NEGRITO ficará */
+    color: rgb(109, 104, 104); /* cor CINZA para fonte */
+}
+
+.bloco-formacao-academica img {
+    max-height: 250px; /* altura da Foto */
+    width: 100%; /* largura da Foto */
+    align-content: center; /* centraliza as Fotos dentro do Box */
+    border-radius: 3px; /* bordas arredondadas das Fotos */
+    margin-top: 15px; /* espaçamento entre as Fotos e o Texto dentro do Box */
+    object-fit: cover; /* adapta a imagem dentro do Box quando a Tela for minimizada, fica responsivo */
+}
+
+.textoBranco {
+    color: white !important; /* padroniza a cor BRANCA no Menu de Navegação e a descriçao de Cargos, logo abaixo da Foto de Perfil */ 
+}
+
+.boxProjetos {
+    list-style: none; /* retira os marcadores REDONDOS, que por padrão vêm nas tags <ul> do Box Section/Container (Projetos) */    
+    color: goldenrod; /* cor de fonte apenas nas tags <ul> (Projetos)*/
+    font-weight: 700; /* faz com que o texto fique com aparência de NEGRITO, quanto maior o número, mas NEGRITO ficará */
+    padding-left: 0px; /* retira espaçamento dos marcadores e os alinha com o texto e Botões */
+}
+
+.marcador-verde {   
+    color: rgb(39, 132, 185); /* cor de fonte, o MARCADOR fica na corde azul quando acompanhado da fonte AZUL */
+    font-weight: 600; /* faz com que o texto fique com aparência de NEGRITO, quanto maior o número, mas NEGRITO ficará */
+    padding-left: 10px; /* retira espaçamento dos marcadores */
+    font-size: 1.4em; /* tamanho aumentado da fonte */   
+}
+
+.fundoEscuro {
+    background-color:rgb(153, 147, 147); /* cor de fundo de uma Section/Container */
+    margin-bottom: -30px; /* retira o espaçamento que já vem por padrão no jumbotron */
+    align-items: center; /* centraliza na horizoltal todos os itens dentro do Container */
+    justify-content: center; /* centraliza tudo */
+}
+
+.paragrafo-fundo-espelhado { 
+    color: gold; /* cor da Fonte */
+    font-weight: 800; /* NEGRITO */
+    font-size: 25px; /* aumenta o tamanho da Fonte */
+    text-shadow: 1px 0px 3px black; /* efeito sombreado na Fonte */
+    text-transform: uppercase; /* Caixa Alta */
+    text-align: center; /* centraliza o Texto no meio da Tela */
+    width: 830px; /* largura onde o Texto será inserido */
+	max-width: 85%; /* largura máxima onde o Texto será inserido */
+	margin: auto; /* margens automáticas, será igual tanto na Direita como Esquerda da Tela */
+	display: flexbox; /* garante que o Texto será manipulado pelos comandos acima */
+    letter-spacing: 0.1em; /* espaçamento entre as Letras */
+}
+
+.paragrafo-fundo-espelhado span {
+    color: rgb(206, 154, 22); /* cor da Fonte */
+    font-size: 1.3em; /* aumenta o tamanho da Fonte  */
+    letter-spacing: -0.1em; /* espaçamento entre as Letras NEGATIVO faz as Letras se juntarem */
+    font-family: Tahoma, sans-serif; /* Fonte */
+    text-shadow: 0 0 10px black; /* efeito sombreado */
+}
+
+.fim-site { 
+    font-weight: 800; /* faz com que o texto fique com aparência de NEGRITO, quanto maior o número, mas NEGRITO ficará */
+    text-transform: uppercase; /* deixa todos os Títulos em Caixa Alta */
+    padding-bottom: .5px; /* espaçamento entre o texto dentro do Rodapé do Site e a margem inferior dele */
+    background-color: rgb(226, 223, 218); /* cor de fundo do Container */
+    margin: 0%; /* retira o espaçamento superior/inferior dentro do Container */ 
+    font-size: medium; /* diminui o tamanho da fonte */
+}
+
+.icones-fim-site {
+    align-self: center; /* centraliza os ÍCONES no meio da Tela */
+    width: 45px; /* largura dos ÍCONES das Redes Sociais */
+	height: 45px; /* altura dos ÍCONES das Redes Sociais */
+	display: flexbox; /* garante que os ÍCONES poderão ser movimentados/alterados */
+    transition: transform .5s ease-in-out; /* causa uma impressão visual "de flutuação" quando o mouse for colocado sobre o video 
+                                            "ease-in-out" especifica um efeito de transição com início lento, depois rápido, depois termina lento */
+}
+
+.icones-fim-site:hover {
+    transform: scale(1.2); /* aumenta o tamanho dos ÍCONES quando o mouse for posicionado sobre eles */
+    -moz-transition: -moz-transform 0.5s ease-in-out; /* garante o funcionamento "de transição na flutuação" da Foto para Mozilla */
+    -webkit-transition: -webkit-transform .5s ease-in-out; /* garante o funcionamento "de transição na flutuação" da Foto para Chrome e Safari */
+    transition: transform .5s ease-in-out; /* causa uma impressão visual "de flutuação" quando o mouse for colocado sobre o video 
+                                            "ease-in-out" especifica um efeito de transição com início lento, depois rápido, depois termina lento */
+}
+
+.rodapeSite {
+    color: white !important; /* padroniza a cor BRANCA no Rodapé do Site */
+    background-color: gray; /* cor de fundo do Rodapé do Site - Section/Container */
+    padding-top: 6px; /* espaçamento entre o texto dentro do Rodapé do Site e a margem superior dele */
+    padding-bottom: 6px; /* espaçamento entre o texto dentro do Rodapé do Site e a margem inferior dele */
+    margin-bottom: 0px; /* retira o espaçamento entre o Rodapé e o fim do site (da Tela) */    
+}
+
+
+/* Modo Responsivo */
+@media all and (min-width: 40.063em) and (max-width: 63.938em) { /* Celular com tamanho de Tela Média */
+    .navbar-nav .botaoMenu { /* PRIMEIRO MENU */
+        font-size: 12px; /* diminui o tamanho da fonte dentro dos Botões do Menu */
+        width: 80px; /* diminui a largura do background */   
+    }
+    .foto-perfil { /* FOTO DE PERFIL */
+        max-width: 100%; /* foto terá tamanho de 60%, como se fosse numa Tela de Computador */
+        margin-left: -40px; /* retira espaçamento que funciona para Computador, mas no 
+                           Modo Responsivo atrapalha */
+        margin-top: 100px; /* ajuda a centraliza e dá espaçamento entre a Foto de Perfil e Menu/Data/Hora Atual */
+    }
+    /* AINDA NÃO ESTÁ FUNCIONANDO CORRETAMENTE */
+    .resumo-objetivo{ /* Texto que APARECE/DESAPARECE com Java do lado da minha Foto de Perfil */
+        margin-top: -30px; /* centraliza RESUMO DE QUALIFICAÇÕES/OBJETIVO no meio do Container 
+                              se eu retirar o Java da Animação este comando funciona*/ 
+    }
+    .jumbotron { /* CERTIFICADOS - ficaram maiores no Modo Responsivo */
+        margin-left: -130px; /* ajuda o CERTIFICADO ficar maior */
+        margin-right: -130px; /* ajuda o CERTIFICADO ficar maior */
+    }
+    .card-body .text-primary{ /* FORMAÇÃO ACADÊMICA - Nome do Curso */
+        font-size: small; /* diminui tamanho da Fonte */
+    }
+    .card-body p{ /* FORMAÇÃO ACADÊMICA - Nome da Faculdade */
+        font-size: small; /* diminui tamanho da Fonte */
+        margin-left: -15px; /* alinha Nome da Faculdade com Nome do Curso */
+    }
+    
+    .bloco-formacao-academica img { /* FORMAÇÃO ACADÊMICA - Fotos dentro dos 2 Boxes */
+        height: 150px; /* ajuda na altura igual das Fotos no Modo Responsivo */
+    }
+    .card-img-top{ /* MEUS PROJETOS */
+        object-fit: cover; /* sem este comando as Fotos ficam desfocadas dentro dos Cards */
+        max-height: 190px; /* altura máxima das Fotos dentro dos Cards */
+    }
+    .boxProjetos{ /* MEUS PROJETOS - 3 Boxes */
+        font-size: x-small; /* diminui o tamanho das palavras HTML, CSS, JavaScript, Python */
+    }
+    .btn-group .btn{ /* MEUS PROJETOS - Botões para ir para Meus Outros Projetos */
+        font-size: xx-small;
+        max-width: 85px ;
+    }
+}
+
+
+
+/* **********************************************************************************************
+***********************************   MEDIA QUERIES   ******************************************* 
+********************************************************************************************** */
+ 
+/* Small Screens ****************************************************************************
+/* max-width 640px *********************************************************************/
+ 
+@media only screen and (max-width: 40em) {
+ 
+}   
+ 
+/* End of small Screens
+        
+/* Medium Screens ***************************************************************************
+/* min-width 641px and max-width 1023px ************************************************/
+ 
+@media only screen and (min-width: 40.063em) and (max-width: 63.938em) {
+ 
+}
+ 
+/* End of Medium Screens
+    
+/* Large Screens ****************************************************************************
+/* min-width 1024px and max-width 1440px ***********************************************/
+ 
+@media only screen and (min-width: 64em) and (max-width: 90em) {  
+   page-container {
+      width: 1024px;       
+    }       
+}
+ 
+/* End of Large Screens
+    
+    
+    
+ /* Extra Large Screens **********************************************************************
+ /* min-width 1441px ********************************************************************/
+ 
+@media only screen and (min-width: 90.063em) {
+       
+   .page-container {
+      width: 1320px;
+   }    
+             
+}
+ 
+ /* End of Extra Large Screens

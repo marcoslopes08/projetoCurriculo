@@ -1,0 +1,49 @@
+/* CSS Vídeos - Site Projeto Curriculo */
+
+.video {
+    width: 360px; /* largura do video */
+    height: 200px; /* altura do video */    
+    position: relative; /* faz o video se adaptar dentro da Section/Container */
+    display: inline-block; /* coloca cada video um ao lado do outro dentro da Section/Container */
+    margin-top: 5px; /* espaçamento superior entre a última linha de texto dentro da Section/Container e os videos */ 
+    transform: translateY(10px); /* faz o vídeo se deslocar para cima (ou para baixo se for -10px) */
+    transition: transform .9s ease; /* tempo que os vídeos levam para Subir/Descer quando o mouse é posicionado sobre eles */
+    border-radius: 25px 0px; /* 25px = arredondamento das bordas Esquerda Superior e Direita Inferior
+                                 0px = SEM arredondamento das bordas Esquerda Inferior e Direita Superior */
+}
+ 
+.legenda { /* Textos/Legendas abaixo de cada video */
+    background-color: rgb(21, 21, 245); /* cor de fundo da Hora Atual */
+    color: white !important; /* padroniza a cor CINZA para da Hora Atual, acima da Foto de Perfil */    
+    border-radius: 5px; /* efeito de bordas arredondadas para o plano de fundo nas legendas */
+    padding: 2px 10px 5px; /* 2px = espaçamento do Texto em relação a margem Superior 
+                             10px = espaçamento entre as margens Direita/Esquerda dentro de cada legenda em relação ao Texto 
+                              5px = espaçamento do Texto em relação a margem Inferior */
+    font-size: medium; /* tamanho reduzido da legenda dentre do plano de fundo */ 
+    display: flex-end; /* centraliza a legenda abaixo de cada video */
+    width: fit-content; /* ajusta o plano de fundo da legenda do mesmo tamanho do texto digitado */
+}
+
+.legenda:hover {
+    background: rgb(17, 131, 177); /* cor de plano de fundo nas legendas */
+    color: white !important; /* cor das letras nas legendas */
+}
+
+.video:hover {	/* animação/flutuar que expande o video na Tela quando o curso/mouse for posicionado sobre ele */
+    -moz-transform: scale(1.02); /* garante o funcionamento no aumento de tamanho do video para Mozilla */
+    -webkit-transform: scale(1.02); /* garante o funcionamento no aumento de tamanho do video para Chrome e Safari */
+    transform: scale(1.02); /* aumenta o tamanho do video original em uma escala de 1.02 a mais */
+    -moz-transition: -moz-transform 0.5s ease; /* garante o funcionamento "de transição na flutuação" do video para Mozilla */
+    -webkit-transition: -webkit-transform .5s ease; /* garante o funcionamento "de transição na flutuação" do video para Chrome e Safari */
+    transition: transform .9s ease; /* causa uma impressão visual "de flutuação" quando o mouse for colocado sobre o video 
+                                      "ease" especifica um efeito de transição com início lento, depois rápido, depois termina lento */
+}
+
+/* Controle Modo Responsivo */
+@media all and (max-width: 980px) { /* Tamanho máximo do Container de Textos */
+    .video { /* os tamanhos abaixo colocam os vídeos em DUAS colunas/boxes */
+        width: 340px; /* largura do video */
+        height: 180px; /* altura do video */    
+    }
+}
+

@@ -1,0 +1,193 @@
+/* CSS Carrossel - Site Projeto Curriculo */
+
+.controle-deslizante {
+    width: 800px; /* espaço que as Fotos HORIZONTALMENTE percorrerão uma pra outra 
+                      800px = faz as fotos ficarem dentro do Slide e serem passadas uma do lado da outra
+                      1800px = causa um efeito como se as fotos saíssem das LATERAIS da Tela */
+    height: 500px; /* altura do Container onde ficarão as Fotos */
+    border-radius: 50px 0px; /* 50px = arredondamento das bordas Esquerda Superior e Direita Inferior
+                                 0px = SEM arredondamento das bordas Esquerda Inferior e Direita Superior */
+    overflow: hidden; /* esconde as Barras de Rolagem, tanto na Direita da Tela como abaixo das Fotos */
+    /* padding-left: 270px; */ /* ajuda a centralizar as Fotos no meio da Tela */
+    margin-bottom: 80px; /* margem entre o Parallax do Carrossel e o Parallax Espelhado 3 (abaixo) */
+    margin-left: 270px; /* ajuda a centralizar as Fotos no meio da Tela */
+}
+ 
+.slides { /* Fotos dentro do 'controle-deslizante' acima */
+    width: 800%; /* largura das Fotos */
+    height: 500px; /* altura da Fotos */
+    display: flex; /* permite que as Fotos sejam manipuladas */
+}
+
+.slides input { 
+    display: none; /* a tag <input type="radio" name="radio-botao" id="radio1"> será escondida atrás das Fotos 
+                      se o comando 'display' for retirado, por exemplo, os Botões ficarão tanto em cima
+                      como embaixo das Fotos, e ainda causará um ERRO na visualização */
+}
+   
+.slide-carrossel {
+    width: 20%; /* espaço entre uma Foto e outra, se for maior que 20%, 
+                   50% = as Fotos passarão muito separadamente uma da outra
+                   10% = fica aparecendo a Foto anterior e posterior enquato passa uma Foto 
+                   DEVE SER 20% */
+    transition: 2s; /* tempo de transição entre uma Foto e outra */
+}
+ 
+.slide-carrossel img {
+    width: 800px; /* centraliza as Fotos no meio da Tela - largura da Foto */
+    height: 500px; /* centraliza as Fotos no meio da Tela - altura da Foto */
+    border-radius: 50px 0px; /* 50px = arredondamento das bordas Esquerda Superior e Direita Inferior
+                                 0px = SEM arredondamento das bordas Esquerda Inferior e Direita Superior */
+    box-shadow: 0 0 0 10px goldenrod; /* coloca uma moldura em volta da Foto */
+}
+  
+/* CSS para navegação manual dos slides (css for manual slide navigation) */
+  
+.navegacao-manual {
+    position: absolute; /* força a centralização dos Botões em cima das Fotos */
+    width: 800px; /* centraliza os Botões no meio das Fotos - largura da Foto */
+    margin-top: -40px; /* é negativa para fazer os Botões ficarem com um espaçamento em relação a parte inferior da Foto */ 
+    display: flex; /* possibilita que os comandos ACIMA sejam executados */
+    justify-content: center; /* justifica e centraliza EXATAMENTE no meio das Fotos */
+}
+  
+.manual-botao {
+    border: 5px solid goldenrod; /* 5px = expessura da borda criada em volta do Botão
+                                    solid = precisa ser colocado para aparecer a borda ao redor do Botão
+                                  #40D3DC = (antiga) cor da borda criada em volta do Botão */
+    padding: 5px; /* esse 'padding' faz os Botões aumentarem/diminuírem de tamanho, é o espaço INTERNO que os Botões terão */
+    border-radius: 10px; /* arredonda os Botões, tem o mesmo efeito de um 'border-radius' de 50px, 
+                            pois neste caso, os Botões são pequenos */
+    cursor: pointer; /* cursor aparecerá como dedo apontando */
+    transition: 1s; /* tempo que levará para APARECER/DESAPARECER a cor dos Botões no HOVER abaixo
+                       quando o mouse for posicionado sobre eles */
+}
+  
+.manual-botao:not(:last-child) {
+    margin-right: 40px; /* espaçamento entre os Botoões de Navegação */
+}
+  
+.manual-botao:hover {
+    background: goldenrod; /* cor de PREENCHIMENTO que os Botões terão quando o mouse for posicionado sobre eles */
+  }
+ 
+#radio1:checked ~ .first { /* radio1 = Primeira Foto é mostrada */
+    margin-left: 0; /* 0 = a Primeira Foto ocupará a posição ZERO (início) 
+                           aqui, deve-se levar em consideraão que o Carrossel vai de 0 a 100%, portanto
+                           os percentuais devem ser respeitados.
+                           Se os valores abaixo forem mudados para -20%, -30%, -50% as Fotos ficarão paradas
+                           no meio do Slide */
+}
+  
+#radio2:checked ~ .first { /* radio2 = Segunda Foto é mostrada */
+    margin-left: -20%;
+}
+  
+#radio3:checked ~ .first { /* radio3 = Terceira Foto é mostrada */
+    margin-left: -40%;
+}
+  
+#radio4:checked ~ .first { /* radio4 = Quarta Foto é mostrada */
+    margin-left: -60%;
+} 
+  
+#radio5:checked ~ .first { /* radio4 = Quarta Foto é mostrada */
+    margin-left: -80%;
+} 
+  
+/* CSS para navegação automática (CSS for automatic navigation) */
+  
+.navegacao-automatica { /* Aqui, são inseridos Botões que ficam camuflados sobre os já criados acima na Classe .navegação-manual */
+    position: absolute; /* força a centralização dos Botões em cima das Fotos */
+    display: flex; /* possibilita que os comandos ACIMA sejam executados */
+    width: 800px;  /* centraliza os Botões no meio das Fotos - largura da Foto */
+    justify-content: center; /* justifica e centraliza EXATAMENTE no meio das Fotos */
+    margin-top: 460px; /* Como a altura das Fotos é de 500px (800x500), então, aqui a margem é de 460px
+                          já que na Classe .navegação-manual foi colocada uma margem negativa de -40px 
+                          Colocando um valor menor, por exemplo, 450px, aparecerá uma bolinha acima das outras
+                          ai, é só mulhar a cor dos #radio1, #radio2, #radio3, #radio4, para VERMELHO que fica interessante */
+}
+  
+.navegacao-automatica div { /* outra camuflagem que deve ter os mesmos comando da Classe .manual-botao */
+    border: 5px solid goldenrod; /* 5px = expessura da borda criada em volta do Botão
+                                  solid = precisa ser colocado para aparecer a borda ao redor do Botão
+                                #40D3DC = cor da borda criada em volta do Botão */
+    padding: 5px; /* esse 'padding' faz os Botões aumentarem/diminuírem de tamanho, é o espaço INTERNO que os Botões terão */
+    border-radius: 10px; /* arredonda os Botões, tem o mesmo efeito de um 'border-radius' de 50px, 
+                            pois neste caso, os Botões são pequenos */
+    transition: 1s; /* tempo que levará para APARECER/DESAPARECER a cor dos Botões
+                       quando o mouse for posicionado sobre eles */
+}
+  
+.navegacao-automatica div:not(:last-child) { /* Aqui, é a camuflagem oposta a Classe .manual-botao:not(:last-child) */
+    margin-right: 40px; /* espaçamento entre os Botoões de Navegação */
+}
+
+#radio1:checked ~ .navegacao-automatica .auto-botao1 {
+    background: goldenrod;
+}
+  
+#radio2:checked ~ .navegacao-automatica .auto-botao2 {
+    background: goldenrod;
+}
+  
+#radio3:checked ~ .navegacao-automatica .auto-botao3 {
+    background: goldenrod;
+}
+  
+#radio4:checked ~ .navegacao-automatica .auto-botao4 {
+    background: goldenrod;
+}
+
+#radio5:checked ~ .navegacao-automatica .auto-botao5 {
+    background: goldenrod;
+}
+
+/* Classe para controlar Títulos sobre os CARROSSEL em Sobre mim */
+
+.titulo1-1:first-child {
+    position: absolute;  
+}
+
+.titulo1-1 span:first-child {
+    color: goldenrod; /* cor da Fonte na Primeira Palavra do Título */
+    background: gainsboro; /* cor de Fundo na Primeira Palavra do Título */
+    padding: 1px 1px 6px 15px; /* 1px = margem Superior entre o Texto e a cor do Plano de Fundo
+                                  1px = espaço entre a última Letra (margem Direita) e a cor do Plano de Fundo 
+                                  6px = margem Inferior entre o Texto e a cor do Plano de Fundo 
+                                 15px = espaço entre a primeira Letra (margem Esquerda) e a cor do Plano de Fundo */
+    border-radius: 2px; /* efeito arredondado nas bordas */
+    letter-spacing: .65rem; /* espaçamento entre as Letras */
+    text-shadow: 0 0 2px black; /* efeito sombreado ao redor Título */
+    font-weight: 900; /* aparência de NEGRITO */
+    position: relative;   
+}
+
+.titulo2-2:last-child { 
+    text-transform: uppercase; /* coloca o texto em Caixa Alta */
+    border-top: 5.5px solid red; /* 5px = expessura e Cor da Linha criada abaixo do na Segunda Palavra do Título
+                                    solid = precisa ser colocado, senão a Linha não aparecerá */
+    border-bottom: 5.5px solid red; /*  5px = expessura e Cor da Linha criada abaixo do na Segunda Palavra do Título
+                                        solid = precisa ser colocado, senão a Linha não aparecerá */
+    padding-bottom: 1.5px; /* espaço entre o Texto (na Segunda Palavra do Título) e a Linha criada abaixo dele */
+    width: fit-content; /* faz a Linha criada abaixo da Segunda Palavra do Título ficar do mesmo tamanho que a linha acima */ 
+    letter-spacing: .3rem; /* espaçamento entre as Letras do na Segunda Palavra do Título */
+    padding-right: 8px; /* faz as Linha criadas ACIMA/ABAIXO da Segunda Palavra do Título ficar do mesmo tamanho que a Linha Acima */ 
+    position: absolute;
+}
+
+.titulo2-2 span:last-child {
+    color:white; /* cor da Fonte na Segunda Palavra do Título (apenas) usando a tag <span> */
+    letter-spacing: -0.1em; /* espaçamento entre as Letras do Nome, NEGATIVO faz as Letras se juntarem */
+    font-family: Tahoma, sans-serif; /* Fonte do Nome */
+    text-shadow: 0 0 10px rgb(3, 90, 3); /* efeito sombreado ao redor da Segunda Palavra do Título (apenas) */
+    position: relative;
+}
+
+/* Modo Responsivo */
+@media all and (min-width: 40.063em) and (max-width: 63.938em) { /* (max-width: 980px) Tamanho máximo do Container de Textos */
+    .controle-deslizante{
+        /* padding-left: 10px; */ /* ajuda a centralizar as Fotos no meio da Tela */
+        margin-left: 90px; /* ajuda a centralizar o Carrossel no meio da Tela */
+    }
+}

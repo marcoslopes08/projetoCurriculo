@@ -1,0 +1,65 @@
+/* CSS Certificados - Site Projeto Curriculo */
+
+.carousel-control-next {
+    /* right: 10%;  */ /* por padrão, as setas são posicionadas nos cantos, definir um % (percentual) junta as setas no centro da imagem */
+    opacity: 1; /* 1 = a seta sempre estará visível, 0 = a seta fica visível quando o mouse for posicionado sobre ela */
+    filter: invert(1); /* 1 = a seta fica da cor preta, 0 = a seta fica cor branca */
+}
+
+.carousel-control-prev {
+    /* right: 10%;  */ /* por padrão, as setas são posicionadas nos cantos, definir um % (percentual) junta as setas no centro da imagem */
+    opacity: 1; /* 1 = a seta sempre estará visível, 0 = a seta fica visível quando o mouse for posicionado sobre ela */
+    filter: invert(1); /* 1 = a seta fica da cor preta, 0 = a seta fica cor branca */
+}
+
+.carousel-inner:hover {	/* animação/flutuar que faz o Certificado/Imagem expandir na Tela quando o curso/mouse for posicionado sobre ele */
+    -moz-transform: scale(1.2); /* garante o funcionamento no aumento de tamanho do video para Mozilla */
+    -webkit-transform: scale(1.2); /* garante o funcionamento no aumento de tamanho do video para Chrome e Safari */
+    transform: scale(1.2); /* aumenta o tamanho do video original em uma escala de 1.2 a mais */
+    -moz-transition: -moz-transform 0.9s; /* garante o funcionamento "de transição na flutuação" do video para Mozilla */
+    -webkit-transition: -webkit-transform .9s ease; /* garante o funcionamento "de transição na flutuação" do video para Chrome e Safari */
+    transition: transform .9s ease-in-out; /* causa uma impressão visual "de flutuação" quando o mouse for colocado sobre o video 
+                                       "ease" especifica um efeito de transição com início lento, depois rápido, depois termina lento */
+}
+
+@media all and (max-width: 980px) { /* Tamanho máximo do Container de Textos */
+    
+    carousel-control-prev {
+        /* visibility:hidden;  */
+    }
+    carousel-control-next {
+        right: 1%; 
+    }
+    carousel-control-prev-icon{
+        right: none;
+    }
+    carousel-item img {
+        block-size: 250px;
+        margin-left: -50px;
+       /* max-width: 300px;
+        align-items: center; */
+        transform: scale(2.2);
+        /* margin-right: -15px;
+        padding: 50px;
+        min-width: 100px; */ 
+        /* margin-left: -50px; */
+        /* margin: 0; */
+       /*  padding: 50px; */
+    }
+    carousel-item:hover {
+        /* width: 500px; */
+        /* box-size: 250px; */
+        /* height: 500px; */
+        /* box-sizing: 450px; */
+        transform: scale(1.5);
+      
+    }
+    carouselExampleIndicators .carousel-inner .carousel-item .img-responsive{
+        overflow-x: hidden;
+    }
+}
+
+
+
+
+

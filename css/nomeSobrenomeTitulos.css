@@ -1,0 +1,124 @@
+/* CSS Meu Nome/Sobrenome e Títulos Sobre os Parallax - Site Projeto Curriculo */
+/* Classes para Controlar meu Nome e Sobrenome (apenas) */
+/* As Classe .meuNome e .meuSobrenome devem ter os comandos abaixo, pois estão dentro do Bootstrap */
+
+.meuNome {
+    text-transform: uppercase; /* coloca o texto em Caixa Alta */
+    margin-left: 70px; /* centraliza Meu Nome dentro do Box */
+    padding-top: 30px; /* espaçamento entre Meu Nome e Foto de Perfil */
+    text-align: left; /* alinha Texto à esquerda */
+    font-family: Tahoma, sans-serif; /* Fonte do Nome */
+}
+
+.meuNome span {
+    color: rgb(34, 109, 207); /* cor que será aplicada no nome MARCOS (apenas) usando a tag <span> */
+    background: rgb(226, 182, 71); /* cor de Fundo aplicada no nome MARCOS (apenas) usando a tag <span>*/
+    padding: 7px 11px 9px 7px; /* 7px = margem Superior entre o Texto e a cor do Plano de Fundo
+                                 11px = espaço entre a última Letra 'S' (margem Direita) e a cor do Plano de Fundo 
+                                  9px = margem Inferior entre o Texto e a cor do Plano de Fundo 
+                                  7px = espaço entre a primeira Letra 'M' (margem Esquerda) e a cor do Plano de Fundo */
+    letter-spacing: -0.1em; /* espaçamento entre as Letras do Nome, NEGATIVO faz as Letras se juntarem */
+}
+
+.meuSobrenome {
+    display: inline-flexbox; /* garante que a Linha criada abaixo do Sobrenome não vai estrapolar */   
+    text-transform: uppercase; /* coloca o texto em Caixa Alta */
+    font-weight: 900; /* faz com que o texto fique com aparência de NEGRITO, quanto maior o número, mas NEGRITO ficará */    
+    margin-top: -63px; /* alinha o Texto Sobrenome horizontalmente ao Nome */
+    border-top: 4px solid rgb(226, 182, 71); /* 4px = expessura e Cor da Linha criada abaixo do Sobrenome
+                                                solid = precisa ser colocado, senão a Linha não aparecerá */
+    border-bottom: 4px solid rgb(34, 109, 207); /* 4px = expessura e Cor da Linha criada abaixo do Sobrenome
+                                                   solid = precisa ser colocado, senão a Linha não aparecerá */
+    padding-bottom: 5px; /* espaço entre o Texto (Sobrenome) e a Linha criada abaixo dele */
+    padding-top: 3px; /* espaço entre o Texto (Sobrenome) e a Linha criada acima dele */
+    margin-left: 222px; /* alinha o Sobrenome do lado Direito do Meu Nome dentro do Box */
+    width: fit-content; /* faz a Linha criada abaixo do Sobrenome ficar do mesmo tamanho que a linha acima */ 
+    letter-spacing: .3rem; /* espaçamento entre as Letras do Sobrenome */
+    padding-right: -5px; /* faz a Linha criada abaixo do Sobrenome ficar do mesmo tamanho que a Linha Acima */
+}
+
+.meuSobrenome span {
+    color: rgb(109, 104, 104); /* cor da Fonte no nome MARCOS (apenas) usando a tag <span> */
+}
+
+/* =======================================================================================
+Classe para controlar Títulos sobre os Parallax
+Histórico / Formação / Certificados / Projetos / Sobre mim */
+
+.titulo1:first-child {
+    display: inline-block; /* posiciona na mesma linha Primeira Palavra 'titulo1' e Segunda Palavra 'titulo2' */
+    text-transform: uppercase; /* coloca o texto em Caixa Alta */
+    font-size: 50px; /* tamanho da fonte, apenas para na Primeira Palavra do Título */
+    padding-top: 50px; /* espaçamento superior entre Primeira Palavra 'titulo1' e Segunda Palavra 'titulo2' e Tela */
+}
+
+.titulo1 span:first-child {
+    color: goldenrod; /* cor da Fonte na Primeira Palavra do Título */
+    background: gainsboro; /* cor de Fundo na Primeira Palavra do Título */
+    padding: 3px 1px 6px 15px; /* 3px = margem Superior entre o Texto e a cor do Plano de Fundo
+                                  1px = espaço entre a última Letra (margem Direita) e a cor do Plano de Fundo 
+                                  6px = margem Inferior entre o Texto e a cor do Plano de Fundo 
+                                 15px = espaço entre a primeira Letra (margem Esquerda) e a cor do Plano de Fundo */
+    border-radius: 2px; /* efeito arredondado nas bordas */
+    letter-spacing: .65rem; /* espaçamento entre as Letras */
+    text-shadow: 0 0 2px black; /* efeito sombreado ao redor Título */
+    font-weight: 900; /* aparência de NEGRITO */
+}
+
+.titulo2:last-child {
+    display: inline-block; /* posiciona na mesma linha Primeira Palavra 'titulo1' e Segunda Palavra 'titulo2' */   
+    text-transform: uppercase; /* coloca o texto em Caixa Alta */
+    border-top: 5.5px solid red; /* 5px = expessura e Cor da Linha criada abaixo do na Segunda Palavra do Título
+                                    solid = precisa ser colocado, senão a Linha não aparecerá */
+    border-bottom: 5.5px solid red; /*  5px = expessura e Cor da Linha criada abaixo do na Segunda Palavra do Título
+                                        solid = precisa ser colocado, senão a Linha não aparecerá */
+    padding-bottom: 1.5px; /* espaço entre o Texto (na Segunda Palavra do Título) e a Linha criada abaixo dele */
+    width: fit-content; /* faz a Linha criada abaixo da Segunda Palavra do Título ficar do mesmo tamanho que a linha acima */ 
+    letter-spacing: .3rem; /* espaçamento entre as Letras do na Segunda Palavra do Título */
+    padding-right: 8px; /* faz as Linha criadas ACIMA/ABAIXO da Segunda Palavra do Título ficar do mesmo tamanho que a Linha Acima */ 
+}
+
+.titulo2 span:last-child {
+    color:white; /* cor da Fonte na Segunda Palavra do Título (apenas) usando a tag <span> */
+    font-size: 1.3em; /* aumenta o tamanho da Fonte na Segunda Palavra do Título (apenas) */
+    letter-spacing: -0.1em; /* espaçamento entre as Letras do Nome, NEGATIVO faz as Letras se juntarem */
+    font-family: Tahoma, sans-serif; /* Fonte do Nome */
+    text-shadow: 0 0 10px rgb(3, 90, 3); /* efeito sombreado ao redor da Segunda Palavra do Título (apenas) */
+}
+
+
+/* Modo Reponsivo */
+@media all and (min-width: 40.063em) and (max-width: 63.938em) { /* Tamanho máximo do Container de Textos */
+    .meuNome{
+        margin-left: -60px; /* retira espaçamento que funciona para Computador, mas no 
+                               Modo Responsivo atrapalha */    
+    }
+    .meuSobrenome{
+        margin-left: 92px; /* retira espaçamento que funciona para Computador, mas no 
+                               Modo Responsivo atrapalha */    
+    }
+}
+
+meuNome {
+    text-transform: uppercase; /* coloca o texto em Caixa Alta */
+    margin-left: 70px; /* centraliza Meu Nome dentro do Box */
+    padding-top: 30px; /* espaçamento entre Meu Nome e Foto de Perfil */
+    text-align: left; /* alinha Texto à esquerda */
+    font-family: Tahoma, sans-serif; /* Fonte do Nome */
+}
+
+
+
+/* =======================================================================================
+Antiga Classa para controlar Títulos sobre os Parallax
+Histórico / Formação / Certificados / Projetos / Sobre mim */
+
+.titulo { 
+    color: goldenrod; /* cor da fonte apenas para Título */
+    font-weight: 800; /* faz com que o texto fique com aparência de NEGRITO, quanto maior o número, mas NEGRITO ficará */
+    font-size: 50px; /* tamanho da fonte, apenas para Título */
+    text-shadow: 0 0 10px black; /* efeito sombreado ao redor Título */
+    text-transform: uppercase; /* deixa todos os Títulos em Caixa Alta */
+}
+
+ 

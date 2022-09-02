@@ -1,0 +1,451 @@
+/* CSS Parallax - Site Projeto Curriculo */
+
+.foto-paralaxx-1 { /* Paralaxx 1 - PARTE 1 - Ferrovia */
+    background-image: url(https://thumbs2.imgbox.com/78/29/C4qyj0SA_t.jpg); /* Primeiro Paralaxx no Topo do Site */
+    background-position: center top; /* centraliza no topo o Paralaxx */
+    background-repeat: no-repeat; /* não repete este PRIMEIRO Paralaxx (fica somente no Topo do Site) */
+    background-size: cover; /* espande a imagem do Paralaxx 100% da altura/largura em todas as 
+                            direções para ocupar todos os espaços do Container */
+    background-attachment: fixed; /* fixa a imagem do Paralaxx, pois por padrão todas as imagens vem por Scroll, 
+                            ou seja, quando descemos pelo site a imagem move-se junto  */
+    padding-top: 300px; /* espaçamento superior do Paralaxx */
+    padding-bottom: 700px; /* espaçamento inferior do Paralaxx */    
+    -webkit-background-size: cover; /* garante o funcionamento do Paralaxx no Chrome e Safari */
+    -moz-background-size: cover; /* garante o funcionamento do Paralaxx no Mozilla */
+    -o-background-size: cover; /* garante o funcionamento do Paralaxx no Ópera */
+}
+
+.foto-paralaxx-1:after { /* Efeito sombreado na parte inferior do Paralaxx */
+    content: ""; /* nenhum texto será escrito, por isso conteúdo vazio apenas para garantir que a sombra terá um COMEÇO e FIM */
+    margin-top: -35px; /* espaçamento negativo, evita que o sombreamento fique em cima do Menu de Navegação */    
+    height: 111.9%; /* 111.8% o efeito sombreado vai começar a partir da frase "APRECIE A JORNADA" até o fim da Foto */
+    width: 100%; /* o efeito sombreado vai pegar a largura de 100% da Tela, da margem Direita até a Esquerda */
+    position: absolute; /* o efeito sombreado terá uma posição fixa dentro da FOTO */
+    z-index: 1; /* era 8 - faz o efeito sombreado ficar sobre a Foto */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 5%, white 100%); /* color: #ece7d5 (cor Bege-claro - efeito nevoeiro) - efeito sombreado sobre a FOTO */
+    background: -moz-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 5%, white 100%); /* efeito sombreado sobre a FOTO no Mozilla*/
+    background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 5%, white 100%); /* efeito sombreado sobre a FOTO no Chrome e Safari */
+    background: -o-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 5%, white 100%); /* efeito sombreado sobre a FOTO no Ópera */
+}
+
+.foto-paralaxx-2 { /* Paralaxx 2 - PARTE 3 - Histórico Profissional */
+    background-image: url(https://thumbs2.imgbox.com/91/3c/c8kAQrXH_t.jpg); 
+    background-position: center top; /* centraliza no topo o Paralaxx */
+    background-repeat: no-repeat; /* não repete este Paralaxx */
+    background-size: cover; /* espande a imagem do Paralaxx 100% da altura/largura em todas as 
+                            direções para ocupar todos os espaços do Container */
+    background-attachment: fixed; /* LOCAL/FIXED - fixa a imagem do Paralaxx, pois por padrão todas as imagens vem por Scroll, 
+                            ou seja, quando descemos pelo site a imagem move-se junto  */
+    padding-top: 300px; /* era 570px - espaçamento superior do Paralaxx */
+    padding-bottom: 50px; /* espaçamento inferior do Paralaxx */
+    -webkit-background-size: cover; /* garante o funcionamento do Paralaxx no Chrome e Safari */
+    -moz-background-size: cover; /* garante o funcionamento do Paralaxx no Mozilla */
+    -o-background-size: cover; /* garante o funcionamento do Paralaxx no Ópera */
+}
+
+.foto-paralaxx-3 { /* Paralaxx 3 - PARTE 4 - Formação Acadêmica */
+    background-image: url(https://thumbs2.imgbox.com/2d/1f/5EjdVmVq_t.jpg);
+    background-position: center top; /* centraliza no topo o Paralaxx */
+    background-repeat: no-repeat; /* não repete este Paralaxx (fica somente no Topo do Site) */
+    background-size: cover; /* espande a imagem do Paralaxx 100% da altura/largura em todas as 
+                            direções para ocupar todos os espaços do Container */
+    background-attachment: fixed; /* LOCAL/FIXED - fixa a imagem do Paralaxx, pois por padrão todas as imagens vem por Scroll, 
+                            ou seja, quando descemos pelo site a imagem move-se junto  */
+    padding-top: 300px; /* espaçamento superior do Paralaxx */
+    padding-bottom: 50px; /* espaçamento inferior do Paralaxx */
+    -webkit-background-size: cover; /* garante o funcionamento do Paralaxx no Chrome e Safari */
+    -moz-background-size: cover; /* garante o funcionamento do Paralaxx no Mozilla */
+    -o-background-size: cover; /* garante o funcionamento do Paralaxx no Ópera */
+}
+
+.foto-paralaxx-4 { /* Paralaxx 4 - PARTE 5 - Certificados */
+    background-image: url(https://thumbs2.imgbox.com/2f/46/ZaOyWKjP_t.jpg);
+    background-position: center top; /* centraliza no topo o Paralaxx */
+    background-repeat: no-repeat; /* não repete este Paralaxx */
+    background-size: cover; /* espande a imagem do Paralaxx 100% da altura/largura em todas as 
+                            direções para ocupar todos os espaços do Container */
+    background-attachment: fixed; /* LOCAL/FIXED - fixa a imagem do Paralaxx, pois por padrão todas as imagens vem por Scroll, 
+                            ou seja, quando descemos pelo site a imagem move-se junto  */
+    padding-top: 300px; /* espaçamento superior do Paralaxx */
+    padding-bottom: 50px; /* espaçamento inferior do Paralaxx */
+    -webkit-background-size: cover; /* garante o funcionamento do Paralaxx no Chrome e Safari */
+    -moz-background-size: cover; /* garante o funcionamento do Paralaxx no Mozilla */
+    -o-background-size: cover; /* garante o funcionamento do Paralaxx no Ópera */
+}
+
+.foto-paralaxx-5 { /* Paralaxx 5 - PARTE 6 - Projetos */
+    background-image: url(https://thumbs2.imgbox.com/0a/53/SBoqfyuf_t.jpg); 
+    background-position: center top; /* centraliza no topo o Paralaxx */
+    background-repeat: no-repeat; /* não repete este Paralaxx */
+    background-size: cover; /* espande a imagem do Paralaxx 100% da altura/largura em todas as 
+                            direções para ocupar todos os espaços do Container */
+    background-attachment: fixed; /* LOCAL/FIXED - fixa a imagem do Paralaxx, pois por padrão todas as imagens vem por Scroll, 
+                            ou seja, quando descemos pelo site a imagem move-se junto  */
+    padding-top: 300px; /* espaçamento superior do Paralaxx */
+    padding-bottom: 50px; /* espaçamento inferior do Paralaxx */
+    -webkit-background-size: cover; /* garante o funcionamento do Paralaxx no Chrome e Safari */
+    -moz-background-size: cover; /* garante o funcionamento do Paralaxx no Mozilla */
+    -o-background-size: cover; /* garante o funcionamento do Paralaxx no Ópera */
+}
+
+.foto-paralaxx-espelhado-1 { /* Paralaxx 5 - PARTE 6 - Projetos (continuação) */
+    background-image: url(https://thumbs2.imgbox.com/76/97/vRzdVVn7_t.jpg); 
+    background-position: center top; /* centraliza no topo o Paralaxx */
+    background-repeat: no-repeat; /* não repete este Paralaxx */
+    background-size: cover; /* espande a imagem do Paralaxx 100% da altura/largura em todas as 
+                            direções para ocupar todos os espaços do Container */
+    background-attachment: fixed; /* LOCAL/FIXED - fixa a imagem do Paralaxx, pois por padrão todas as imagens vem por Scroll, 
+                            ou seja, quando descemos pelo site a imagem move-se junto  */
+    padding-top: 2px; /* espaçamento superior entre o Menu de Navegação em relação ao Paralaxx acima*/
+    padding-bottom: 0px; /* espaçamento inferior do Paralaxx */
+    -webkit-background-size: cover; /* garante o funcionamento do Paralaxx no Chrome e Safari */
+    -moz-background-size: cover; /* garante o funcionamento do Paralaxx no Mozilla */
+    -o-background-size: cover; /* garante o funcionamento do Paralaxx no Ópera */
+}
+
+.foto-paralaxx-6 { /* Paralaxx 6 - PARTE 7 - Sobre mim */
+    background-image: url(https://thumbs2.imgbox.com/31/e1/VXKSVy23_t.jpg);
+    background-position: center top; /* centraliza no topo o Paralaxx */
+    background-repeat: no-repeat; /* não repete este Paralaxx */
+    background-size: cover; /* espande a imagem do Paralaxx 100% da altura/largura em todas as 
+                            direções para ocupar todos os espaços do Container */
+    background-attachment: fixed; /* LOCAL/FIXED - fixa a imagem do Paralaxx, pois por padrão todas as imagens vem por Scroll, 
+                            ou seja, quando descemos pelo site a imagem move-se junto  */
+    padding-top: 570px; /* espaçamento superior do Paralaxx */
+    padding-bottom: 50px; /* espaçamento inferior do Paralaxx */
+    -webkit-background-size: cover; /* garante o funcionamento do Paralaxx no Chrome e Safari */
+    -moz-background-size: cover; /* garante o funcionamento do Paralaxx no Mozilla */
+    -o-background-size: cover; /* garante o funcionamento do Paralaxx no Ópera */
+}
+
+.foto-paralaxx-espelhado-2 { /* Paralaxx 6 - PARTE 7 - Sobre mim (continuação) */
+    background-image: url(https://thumbs2.imgbox.com/6f/fb/MHRrv6c9_t.jpg); 
+    background-position: center top;  /* center = centraliza o Paralaxx
+                                            top = garante que o Paralaxx vai ser continuo 
+                                            (ficar grudado ao anterior) */
+    background-repeat: no-repeat; /* não repete este Paralaxx */
+    background-size: cover; /* espande a imagem do Paralaxx 100% da altura/largura em todas as 
+                            direções para ocupar todos os espaços do Container */
+    background-attachment: fixed; /* LOCAL/FIXED - fixa a imagem do Paralaxx, pois por padrão todas as imagens vem por Scroll, 
+                            ou seja, quando descemos pelo site a imagem move-se junto  */
+    padding-top: 2px; /* espaçamento superior entre o Menu de Navegação em relação ao Paralaxx acima*/
+    padding-bottom: 0px; /* espaçamento inferior do Paralaxx - retira qualquer espaço entre os Paralaxxs */
+    -webkit-background-size: cover; /* garante o funcionamento do Paralaxx no Chrome e Safari */
+    -moz-background-size: cover; /* garante o funcionamento do Paralaxx no Mozilla */
+    -o-background-size: cover; /* garante o funcionamento do Paralaxx no Ópera */
+}
+
+.foto-paralaxx-espelhado-3 { /* Paralaxx 6 - PARTE 7 - Sobre mim (continuação) Denim - Preto e Branco */
+    background-image: url(https://thumbs2.imgbox.com/45/b2/zO8R8oBq_t.jpg); 
+    background-position: center top; /* center = centraliza o Paralaxx
+                                           top = garante que o Paralaxx vai ser continuo 
+                                           (ficar grudado ao anterior) */
+    background-repeat: no-repeat; /* não repete este Paralaxx */
+    background-size: cover; /* espande a imagem do Paralaxx 100% da altura/largura em todas as 
+                            direções para ocupar todos os espaços do Container */
+    background-attachment: fixed; /* LOCAL/FIXED - fixa a imagem do Paralaxx, pois por padrão todas as imagens vem por Scroll, 
+                            ou seja, quando descemos pelo site a imagem move-se junto  */
+    padding-top: 400px; /* centraliza o Texto no meio do Paralaxx e coloca um espaçamento acima */
+    padding-bottom: 400px; /* centraliza o Texto no meio do Paralaxx e coloca um espaçamento abaixo */
+    -webkit-background-size: cover; /* garante o funcionamento do Paralaxx no Chrome e Safari */
+    -moz-background-size: cover; /* garante o funcionamento do Paralaxx no Mozilla */
+    -o-background-size: cover; /* garante o funcionamento do Paralaxx no Ópera */
+}
+
+.foto-paralaxx-7 { /* Paralaxx 7 - PARTE 8 - Gatinho */
+    background-image: url(https://thumbs2.imgbox.com/33/05/s5sBqGPV_t.jpg);
+    background-position: center top; /* centraliza no topo o Paralaxx */
+    background-repeat: no-repeat; /* não repete este Paralaxx */
+    background-size: cover; /* espande a imagem do Paralaxx 100% da altura/largura em todas as 
+                            direções para ocupar todos os espaços do Container */
+    background-attachment: fixed; /* fixa a imagem do Paralaxx, pois por padrão todas as imagens vem por Scroll, 
+                            ou seja, quando descemos pelo site a imagem move-se junto  */
+    padding-top: 190px; /* espaçamento superior do Paralaxx */
+    padding-bottom: 300px; /* espaçamento inferior do Paralaxx */
+    margin-top: -30px; /* garante que o Menu de Naveação em cima da Foto fique exatamente no topo */
+    -webkit-background-size: cover; /* garante o funcionamento do Paralaxx no Chrome e Safari */
+    -moz-background-size: cover; /* garante o funcionamento do Paralaxx no Mozilla */
+    -o-background-size: cover; /* garante o funcionamento do Paralaxx no Ópera */
+}
+
+
+/* Modo Responsivo */
+@media all and (min-width: 40.063em) and (max-width: 63.938em) { /* Tamanho máximo do Container de Textos */
+    /* PARALLAX 1 - Ferrovia */
+    /* foto-paralaxx-1 { */ /* Paralaxx 1 - PARTE 1 - Ferrovia */        
+        /* background-size: 100vh; */ /* ajusta a imagem com altura de 100% da Tela
+                                        mas no Modo Responsivo deixa um vão entre o Parallax e o 
+                                        Menu abaixo */
+   /*  }  */
+    .foto-paralaxx-1:after{ /* Paralaxx 1 - PARTE 1 - Ferrovia (NÉVOA/sombreamento) */
+        padding-bottom: 736px; /* preenchimento do efeito NÉVOA/sombreamento até o Menu */
+        height: 0%; /* a altura PRECISA ser 0(zero) para o efeito NÉVOA/sombreamento 
+                       ficar rente ao Menu de Navegação em qualquer tipo de Celular/Mobile */   
+    }
+    /* PARALLAX 2 - Histórico Profissional */
+    .foto-paralaxx-2 { /* Paralaxx 2 - PARTE 3 - Histórico Profissional */
+        background-attachment:scroll; /* ESTE É O MELHOR COMANDO - pois fixa a imagem no tamanho real, porém perde-se o Parallax
+                                        LOCAL/SCROLL - fixa a imagem no tamanho real, mas perde-se o Parllax                        
+                                        FIXED - o Paralaxx funciona, pois por padrão todas as imagens vem por Scroll */
+    } 
+    /* PARALLAX 3 - Formação Acadêmica */
+    .foto-paralaxx-3 { /* Paralaxx 3 - PARTE 4 - Formação Acadêmica */
+        background-attachment:scroll; /* ESTE É O MELHOR COMANDO - pois fixa a imagem no tamanho real, porém perde-se o Parallax
+        LOCAL/SCROLL - fixa a imagem no tamanho real, mas perde-se o Parllax                        
+        FIXED - o Paralaxx funciona, pois por padrão todas as imagens vem por Scroll */
+    }
+    /* PARALLAX 4 - Certificados */
+    .foto-paralaxx-4 { /* Paralaxx 4 - PARTE 5 - Certificados */
+        background-attachment:scroll; /* ESTE É O MELHOR COMANDO - pois fixa a imagem no tamanho real, porém perde-se o Parallax
+                                        LOCAL/SCROLL - fixa a imagem no tamanho real, mas perde-se o Parllax                        
+                                        FIXED - o Paralaxx funciona, pois por padrão todas as imagens vem por Scroll */
+    }
+    /* PARALLAX 5 - Projetos */
+    .foto-paralaxx-5 { /* Paralaxx 5 - PARTE 6 - Projetos */
+        background-attachment:scroll; /* ESTE É O MELHOR COMANDO - pois fixa a imagem no tamanho real, porém perde-se o Parallax
+                                        LOCAL/SCROLL - fixa a imagem no tamanho real, mas perde-se o Parllax                        
+                                        FIXED - o Paralaxx funciona, pois por padrão todas as imagens vem por Scroll */
+    }
+    /* PARALLAX 5 - Projetos (continuação) */
+    foto-paralaxx-espelhado-1 { /* Paralaxx 5 - PARTE 6 - Projetos (continuação) */
+        background-position:top;
+    }
+    /* Se eu colocar os comandos abaixo, os Parallax se misturam */
+    /* PARALLAX 6 - Sobre mim */
+    foto-paralaxx-6 { /* Paralaxx 6 - PARTE 7 - Sobre mim */
+        background-size: 100vh; /* ajusta a imagem com altura de 100% da Tela */
+    } 
+    /* Se eu colocar os comandos abaixo, os Parallax se misturam */
+    /* PARALLAX 6 - Sobre mim (continuação) */
+    foto-paralaxx-espelhado-2 { /* Paralaxx 6 - PARTE 7 - Sobre mim (continuação) */
+        background-size: 100vh; /* ajusta a imagem com altura de 100% da Tela */
+    }
+    /* Se eu colocar os comandos abaixo, os Parallax se misturam */
+    /* PARALLAX 6 - Sobre mim (continuação) Denim - Preto e Branco */
+    foto-paralaxx-espelhado-3 { /* Paralaxx 6 - PARTE 7 - Sobre mim (continuação) Denim - Preto e Branco */
+        background-size: 100vh; /* ajusta a imagem com altura de 100% da Tela */
+    }
+    /* PARALLAX 7 - Gatinho */
+    .foto-paralaxx-7 { /* Paralaxx 7 - PARTE 8 - Gatinho */
+        background-attachment:scroll; /* ESTE É O MELHOR COMANDO - pois fixa a imagem no tamanho real, porém perde-se o Parallax
+                                        LOCAL/SCROLL - fixa a imagem no tamanho real, mas perde-se o Parllax                        
+                                        FIXED - o Paralaxx funciona, pois por padrão todas as imagens vem por Scroll */
+    }
+}
+
+
+/* historico profissional
+
+historico-1-ML - talvez
+[URL=https://imgbox.com/r04cwPxD][IMG]https://thumbs2.imgbox.com/0e/07/r04cwPxD_t.jpg[/IMG][/URL]
+
+<a href="https://imgbox.com/r04cwPxD" target="_blank"><img src="https://thumbs2.imgbox.com/0e/07/r04cwPxD_t.jpg" alt="image host"/></a>
+
+
+quadrado
+
+[URL=https://imgbox.com/w9GRdqPJ][IMG]https://thumbs2.imgbox.com/de/31/w9GRdqPJ_t.jpg[/IMG][/URL]
+
+
+
+historico-1-ML
+
+[URL=https://imgbox.com/tz86zLYE][IMG]https://thumbs2.imgbox.com/c2/5e/tz86zLYE_t.jpg[/IMG][/URL]
+
+<a href="https://imgbox.com/tz86zLYE" target="_blank"><img src="https://thumbs2.imgbox.com/c2/5e/tz86zLYE_t.jpg" alt="image host"/></a>
+
+quadrado
+
+
+[URL=https://imgbox.com/H5zKk00u][IMG]https://thumbs2.imgbox.com/b0/f6/H5zKk00u_t.jpg[/IMG][/URL]
+
+
+
+historico-2-Premier
+
+[URL=https://imgbox.com/Sd4qEr9H][IMG]https://thumbs2.imgbox.com/56/9d/Sd4qEr9H_t.jpg[/IMG][/URL]
+
+
+<a href="https://imgbox.com/Sd4qEr9H" target="_blank"><img src="https://thumbs2.imgbox.com/56/9d/Sd4qEr9H_t.jpg" alt="image host"/></a>
+
+quadrado
+
+[URL=https://imgbox.com/nx8d5AXZ][IMG]https://thumbs2.imgbox.com/21/2e/nx8d5AXZ_t.jpg[/IMG][/URL]
+
+
+historico-3-Admix
+
+[URL=https://imgbox.com/91RoR3IO][IMG]https://thumbs2.imgbox.com/f8/87/91RoR3IO_t.jpg[/IMG][/URL]
+
+<a href="https://imgbox.com/91RoR3IO" target="_blank"><img src="https://thumbs2.imgbox.com/f8/87/91RoR3IO_t.jpg" alt="image host"/></a>
+
+quadrado
+
+[URL=https://imgbox.com/kxZy08p6][IMG]https://thumbs2.imgbox.com/5c/20/kxZy08p6_t.jpg[/IMG][/URL]
+
+
+trabalhando 1
+
+[URL=https://imgbox.com/AHFcz1pO][IMG]https://thumbs2.imgbox.com/d9/99/AHFcz1pO_t.jpg[/IMG][/URL]
+
+<a href="https://imgbox.com/AHFcz1pO" target="_blank"><img src="https://thumbs2.imgbox.com/d9/99/AHFcz1pO_t.jpg" alt="image host"/></a>
+
+ */
+
+/* 
+ Comercio Exterior - Formação Acadêmica
+
+ comercio_exterior-1
+
+ [URL=https://imgbox.com/vJIwgLCc][IMG]https://thumbs2.imgbox.com/c6/8e/vJIwgLCc_t.jpg[/IMG][/URL]
+
+ <a href="https://imgbox.com/vJIwgLCc" target="_blank"><img src="https://thumbs2.imgbox.com/c6/8e/vJIwgLCc_t.jpg" alt="image host"/></a>
+
+ comercio_exterior-2
+
+ [URL=https://imgbox.com/4jGXoTsE][IMG]https://thumbs2.imgbox.com/e3/7d/4jGXoTsE_t.jpg[/IMG][/URL]
+
+ <a href="https://imgbox.com/4jGXoTsE" target="_blank"><img src="https://thumbs2.imgbox.com/e3/7d/4jGXoTsE_t.jpg" alt="image host"/></a>
+
+ comercio_exterior-3
+
+ [URL=https://imgbox.com/TIjuXtxo][IMG]https://thumbs2.imgbox.com/86/36/TIjuXtxo_t.jpg[/IMG][/URL]
+
+ <a href="https://imgbox.com/TIjuXtxo" target="_blank"><img src="https://thumbs2.imgbox.com/86/36/TIjuXtxo_t.jpg" alt="image host"/></a>
+
+ comercio_exterior-4
+
+ [URL=https://imgbox.com/mk5iWFVW][IMG]https://thumbs2.imgbox.com/5b/6d/mk5iWFVW_t.jpg[/IMG][/URL]
+
+ <a href="https://imgbox.com/mk5iWFVW" target="_blank"><img src="https://thumbs2.imgbox.com/5b/6d/mk5iWFVW_t.jpg" alt="image host"/></a>
+
+ comercio_exterior-4 - SunScreen
+
+ [URL=https://imgbox.com/aHVrVPEt][IMG]https://thumbs2.imgbox.com/dc/63/aHVrVPEt_t.jpg[/IMG][/URL]
+
+ <a href="https://imgbox.com/aHVrVPEt" target="_blank"><img src="https://thumbs2.imgbox.com/dc/63/aHVrVPEt_t.jpg" alt="image host"/></a>
+
+Mapa mais para cima
+ <a href="https://imgbox.com/7hTaMQTs" target="_blank"><img src="https://thumbs2.imgbox.com/67/33/7hTaMQTs_t.jpg" alt="image host"/></a>
+
+ Finanças
+
+ formação-financas-1
+
+ [URL=https://imgbox.com/FayZjnOT][IMG]https://thumbs2.imgbox.com/1c/8b/FayZjnOT_t.jpg[/IMG][/URL]
+
+ <a href="https://imgbox.com/FayZjnOT" target="_blank"><img src="https://thumbs2.imgbox.com/1c/8b/FayZjnOT_t.jpg" alt="image host"/></a>
+
+ formação-financas-2
+ [URL=https://imgbox.com/PkHAkPQa][IMG]https://thumbs2.imgbox.com/51/bf/PkHAkPQa_t.jpg[/IMG][/URL]
+
+ <a href="https://imgbox.com/PkHAkPQa" target="_blank"><img src="https://thumbs2.imgbox.com/51/bf/PkHAkPQa_t.jpg" alt="image host"/></a>
+
+
+
+ formação-financas-3
+[URL=https://imgbox.com/PmF1TMdF][IMG]https://thumbs2.imgbox.com/ef/a0/PmF1TMdF_t.jpg[/IMG][/URL]
+
+<a href="https://imgbox.com/PmF1TMdF" target="_blank"><img src="https://thumbs2.imgbox.com/ef/a0/PmF1TMdF_t.jpg" alt="image host"/></a>
+
+
+ formação-financas-4
+
+ [URL=https://imgbox.com/KR7toiIt][IMG]https://thumbs2.imgbox.com/9a/f8/KR7toiIt_t.jpg[/IMG][/URL]
+
+ <a href="https://imgbox.com/KR7toiIt" target="_blank"><img src="https://thumbs2.imgbox.com/9a/f8/KR7toiIt_t.jpg" alt="image host"/></a>
+
+ formação-financas-5
+
+ [URL=https://imgbox.com/KInzk6Dx][IMG]https://thumbs2.imgbox.com/1b/22/KInzk6Dx_t.jpg[/IMG][/URL]
+
+ <a href="https://imgbox.com/KInzk6Dx" target="_blank"><img src="https://thumbs2.imgbox.com/1b/22/KInzk6Dx_t.jpg" alt="image host"/></a>
+  */
+
+/* Projetos - Caculadora
+
+projetos-1-Calculadora
+
+[URL=https://imgbox.com/coCptofx][IMG]https://thumbs2.imgbox.com/7e/7d/coCptofx_t.jpg[/IMG][/URL]
+
+<a href="https://imgbox.com/coCptofx" target="_blank"><img src="https://thumbs2.imgbox.com/7e/7d/coCptofx_t.jpg" alt="image host"/></a>
+
+
+projetos-2-Calculadora
+
+[URL=https://imgbox.com/NRjiFjv8][IMG]https://thumbs2.imgbox.com/d3/ac/NRjiFjv8_t.jpg[/IMG][/URL]
+
+<a href="https://imgbox.com/NRjiFjv8" target="_blank"><img src="https://thumbs2.imgbox.com/d3/ac/NRjiFjv8_t.jpg" alt="image host"/></a>
+
+projetos-3-Calculadora
+
+[URL=https://imgbox.com/6rXjg2B6][IMG]https://thumbs2.imgbox.com/59/0b/6rXjg2B6_t.jpg[/IMG][/URL]
+
+<a href="https://imgbox.com/6rXjg2B6" target="_blank"><img src="https://thumbs2.imgbox.com/59/0b/6rXjg2B6_t.jpg" alt="image host"/></a>
+
+projetos-4-Calculadora
+
+[URL=https://imgbox.com/dRKhCiMO][IMG]https://thumbs2.imgbox.com/fe/bb/dRKhCiMO_t.jpg[/IMG][/URL]
+
+<a href="https://imgbox.com/dRKhCiMO" target="_blank"><img src="https://thumbs2.imgbox.com/fe/bb/dRKhCiMO_t.jpg" alt="image host"/></a>
+ */
+/* 
+Projetos - Passatempo
+
+projetos-1-Passatempo
+
+
+
+
+projetos-2-Passatempo
+
+[URL=https://imgbox.com/JjRUHFLG][IMG]https://thumbs2.imgbox.com/62/ca/JjRUHFLG_t.jpg[/IMG][/URL]
+
+<a href="https://imgbox.com/JjRUHFLG" target="_blank"><img src="https://thumbs2.imgbox.com/62/ca/JjRUHFLG_t.jpg" alt="image host"/></a>
+
+
+projetos-3-Passatempo
+
+[URL=https://imgbox.com/5pZQGPO6][IMG]https://thumbs2.imgbox.com/1a/04/5pZQGPO6_t.jpg[/IMG][/URL]
+
+<a href="https://imgbox.com/5pZQGPO6" target="_blank"><img src="https://thumbs2.imgbox.com/1a/04/5pZQGPO6_t.jpg" alt="image host"/></a>
+
+
+projetos-4-Passatempo
+
+
+
+projetos-5-Passatempo
+
+
+
+projetos-6-Passatempo
+
+
+
+
+
+ */
+
+
+/*  Sobre mim
+    Denim - quase preto e branco
+    [URL=https://imgbox.com/zO8R8oBq][IMG]https://thumbs2.imgbox.com/45/b2/zO8R8oBq_t.jpg[/IMG][/URL]
+
+    <a href="https://imgbox.com/zO8R8oBq" target="_blank"><img src="https://thumbs2.imgbox.com/45/b2/zO8R8oBq_t.jpg" alt="image host"/></a>
+    
+    
+    SunScreen
+
+    <a href="https://imgbox.com/MHRrv6c9" target="_blank"><img src="https://thumbs2.imgbox.com/6f/fb/MHRrv6c9_t.jpg" alt="image host"/></a>
+    */
+/* 
+    Mapa Mundi
+
+    [URL=https://imgbox.com/xqE7BC2m][IMG]https://thumbs2.imgbox.com/b2/9a/xqE7BC2m_t.jpg[/IMG][/URL]
+
+    <a href="https://imgbox.com/xqE7BC2m" target="_blank"><img src="https://thumbs2.imgbox.com/b2/9a/xqE7BC2m_t.jpg" alt="image host"/></a>
+     */
+
+
+
