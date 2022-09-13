@@ -90,23 +90,12 @@ Histórico / Formação / Certificados / Projetos / Sobre mim */
 /* Modo Reponsivo */
 @media all and (min-width: 40.063em) and (max-width: 63.938em) { /* Tamanho máximo do Container de Textos */
     .meuNome{
-        margin-left: -60px; /* retira espaçamento que funciona para Computador, mas no 
-                               Modo Responsivo atrapalha */    
+        margin-left: 200px; /* centraliza no meio do Container */    
     }
     .meuSobrenome{
-        margin-left: 92px; /* retira espaçamento que funciona para Computador, mas no 
-                               Modo Responsivo atrapalha */    
+        margin-left: 352px; /* centraliza no meio do Container */    
     }
 }
-
-meuNome {
-    text-transform: uppercase; /* coloca o texto em Caixa Alta */
-    margin-left: 70px; /* centraliza Meu Nome dentro do Box */
-    padding-top: 30px; /* espaçamento entre Meu Nome e Foto de Perfil */
-    text-align: left; /* alinha Texto à esquerda */
-    font-family: Tahoma, sans-serif; /* Fonte do Nome */
-}
-
 
 
 /* =======================================================================================
