@@ -1,13 +1,15 @@
 /* CSS Carrossel - Site Projeto Curriculo */
 
 .controle-deslizante {
+    position: relative; /* Fundamental para as Fotos não extrapolarem as margens */
     width: 800px; /* espaço que as Fotos HORIZONTALMENTE percorrerão uma pra outra 
                       800px = faz as fotos ficarem dentro do Slide e serem passadas uma do lado da outra
                       1800px = causa um efeito como se as fotos saíssem das LATERAIS da Tela */
     height: 500px; /* altura do Container onde ficarão as Fotos */
     border-radius: 50px 0px; /* 50px = arredondamento das bordas Esquerda Superior e Direita Inferior
                                  0px = SEM arredondamento das bordas Esquerda Inferior e Direita Superior */
-    overflow: hidden; /* esconde as Barras de Rolagem, tanto na Direita da Tela como abaixo das Fotos */
+    /* overflow: hidden; */ /* esconde as Barras de Rolagem, tanto na Direita da Tela como abaixo das Fotos 
+                               se overflow: hidden for colocado, a Borda não aparece ao redor da Foto*/
     /* padding-left: 270px; */ /* ajuda a centralizar as Fotos no meio da Tela */
     margin-bottom: 80px; /* margem entre o Parallax do Carrossel e o Parallax Espelhado 3 (abaixo) */
     margin-left: 270px; /* ajuda a centralizar as Fotos no meio da Tela */
