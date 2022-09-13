@@ -244,15 +244,9 @@ body, html { /* a função "Rolagem Suave" não funciona no Microsoft Edge (anti
         width: 80px; /* diminui a largura do background */   
     }
     .foto-perfil { /* FOTO DE PERFIL */
-        max-width: 100%; /* foto terá tamanho de 60%, como se fosse numa Tela de Computador */
-        margin-left: -40px; /* retira espaçamento que funciona para Computador, mas no 
-                           Modo Responsivo atrapalha */
-        margin-top: 100px; /* ajuda a centraliza e dá espaçamento entre a Foto de Perfil e Menu/Data/Hora Atual */
-    }
-    /* AINDA NÃO ESTÁ FUNCIONANDO CORRETAMENTE */
-    .resumo-objetivo{ /* Texto que APARECE/DESAPARECE com Java do lado da minha Foto de Perfil */
-        margin-top: -30px; /* centraliza RESUMO DE QUALIFICAÇÕES/OBJETIVO no meio do Container 
-                              se eu retirar o Java da Animação este comando funciona*/ 
+        max-width: 140%; /* tamanho da Foto */
+        margin-left: 150px; /* centraliza a Foto no meio do Container */
+       /* margin-top: 100px; */ /* ajuda a centraliza e dá espaçamento entre a Foto de Perfil e Menu/Data/Hora Atual */
     }
     .jumbotron { /* CERTIFICADOS - ficaram maiores no Modo Responsivo */
         margin-left: -130px; /* ajuda o CERTIFICADO ficar maior */
@@ -265,7 +259,6 @@ body, html { /* a função "Rolagem Suave" não funciona no Microsoft Edge (anti
         font-size: small; /* diminui tamanho da Fonte */
         margin-left: -15px; /* alinha Nome da Faculdade com Nome do Curso */
     }
-    
     .bloco-formacao-academica img { /* FORMAÇÃO ACADÊMICA - Fotos dentro dos 2 Boxes */
         height: 150px; /* ajuda na altura igual das Fotos no Modo Responsivo */
     }
