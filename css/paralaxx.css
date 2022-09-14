@@ -172,11 +172,11 @@
 /* Modo Responsivo */
 @media all and (min-width: 40.063em) and (max-width: 63.938em) { /* Tamanho máximo do Container de Textos */
     /* PARALLAX 1 - Ferrovia */
-    /* foto-paralaxx-1 { */ /* Paralaxx 1 - PARTE 1 - Ferrovia */        
-        /* background-size: 100vh; */ /* ajusta a imagem com altura de 100% da Tela
+    .foto-paralaxx-1 { /* Paralaxx 1 - PARTE 1 - Ferrovia */        
+        background-size: 100vh; /* ajusta a imagem com altura de 100% da Tela
                                         mas no Modo Responsivo deixa um vão entre o Parallax e o 
                                         Menu abaixo */
-   /*  }  */
+    }
     .foto-paralaxx-1:after{ /* Paralaxx 1 - PARTE 1 - Ferrovia (NÉVOA/sombreamento) */
         padding-bottom: 736px; /* preenchimento do efeito NÉVOA/sombreamento até o Menu */
         height: 0%; /* a altura PRECISA ser 0(zero) para o efeito NÉVOA/sombreamento 
