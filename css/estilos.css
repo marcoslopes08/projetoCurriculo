@@ -256,7 +256,7 @@ body, html { /* a função "Rolagem Suave" não funciona no Microsoft Edge (anti
         font-size: small; /* diminui tamanho da Fonte */
     }
     .card-body p{ /* FORMAÇÃO ACADÊMICA - Nome da Faculdade */
-        font-size: small; /* diminui tamanho da Fonte */
+        font-size: x-small; /* diminui tamanho da Fonte */
         margin-left: -15px; /* alinha Nome da Faculdade com Nome do Curso */
     }
     .bloco-formacao-academica img { /* FORMAÇÃO ACADÊMICA - Fotos dentro dos 2 Boxes */
