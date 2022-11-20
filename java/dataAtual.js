@@ -4,8 +4,8 @@ type="text/javascript"
 	dayName = new Array("Domingo", "Segunda-feira", "Terça-feira", 
 		"Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado")
 
-	monName = new Array("janeiro", "fevereiro", "março", "abril", 
-		"maio", "junho", "agosto", "outubro", "novembro", "dezembro")
+		monName = new Array("janeiro", "fevereiro", "março", "abril", "maio", 
+		"junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro")
 
 now = new Date
 			
