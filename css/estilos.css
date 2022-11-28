@@ -40,7 +40,8 @@ body, html { /* a função "Rolagem Suave" não funciona no Microsoft Edge (anti
     padding-bottom: 0px; /* espaçamento entre o texto e a borda inferior do box */
 }
 
-.botaoMenu {
+/* Esta Menu Principal foi substituído pela Classe "navegar-entre-paginas" */
+botaoMenu {
     background-color: rgb(99, 159, 238); /* cor de fundo dos Botões do Menu */
     color: white !important; /* cor da fonte */
     text-align: center; /* alinhamento central das Fontes */
@@ -61,7 +62,7 @@ body, html { /* a função "Rolagem Suave" não funciona no Microsoft Edge (anti
                                                                         0px = altura do esfumaçamento abaixo do Botão */
 }
 
-.botaoMenu:hover { /* animação/flutuar dos Botões do Menu */
+botaoMenu:hover { /* animação/flutuar dos Botões do Menu */
     color: white !important; /* cor da fonte */
     background-color: rgb(109, 104, 104); /* quando o mouse for posicionado em cima dos Botões eles mudarão de cor */
     font-weight: 700; /* faz com que o texto fique com aparência de NEGRITO, quanto maior o número, mas NEGRITO ficará */
@@ -239,7 +240,7 @@ body, html { /* a função "Rolagem Suave" não funciona no Microsoft Edge (anti
 
 /* Modo Responsivo */
 @media all and (min-width: 40.063em) and (max-width: 63.938em) { /* Celular com tamanho de Tela Média */
-    .navbar-nav .botaoMenu { /* PRIMEIRO MENU */
+    .navbar-nav .navegar-entre-paginas { /* PRIMEIRO MENU */
         font-size: 12px; /* diminui o tamanho da fonte dentro dos Botões do Menu */
         width: 80px; /* diminui a largura do background */   
     }
