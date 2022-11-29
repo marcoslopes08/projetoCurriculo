@@ -241,7 +241,7 @@ botaoMenu:hover { /* animação/flutuar dos Botões do Menu */
 /* Modo Responsivo */
 @media all and (min-width: 40.063em) and (max-width: 63.938em) { /* Celular com tamanho de Tela Média */
     .navbar-nav .navegar-entre-paginas { /* PRIMEIRO MENU */
-        font-size: 12px; /* diminui o tamanho da fonte dentro dos Botões do Menu */
+        font-size: 9px; /* diminui o tamanho da fonte dentro dos Botões do Menu */
         width: 80px; /* diminui a largura do background */   
     }
     .foto-perfil { /* FOTO DE PERFIL */
