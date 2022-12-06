@@ -90,10 +90,10 @@ Histórico / Formação / Certificados / Projetos / Sobre mim */
 /* Modo Reponsivo */
 @media all and (min-width: 40.063em) and (max-width: 63.938em) { /* Tamanho máximo do Container de Textos */
     .meuNome{
-        margin-left: 200px; /* centraliza no meio do Container */    
+        margin-left: -40px; /* Era 200px - centraliza no meio do Container */    
     }
     .meuSobrenome{
-        margin-left: 362px; /* centraliza no meio do Container */    
+        margin-left: 112px; /* Era 362px - centraliza no meio do Container */    
     }
 }
 
