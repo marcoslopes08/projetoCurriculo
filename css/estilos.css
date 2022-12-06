@@ -237,7 +237,6 @@ botaoMenu:hover { /* animação/flutuar dos Botões do Menu */
     margin-bottom: 0px; /* retira o espaçamento entre o Rodapé e o fim do site (da Tela) */    
 }
 
-
 /* Modo Responsivo */
 @media all and (min-width: 40.063em) and (max-width: 63.938em) { /* Celular com tamanho de Tela Média */
     .navbar-nav .navegar-entre-paginas { /* PRIMEIRO MENU */
@@ -245,9 +244,9 @@ botaoMenu:hover { /* animação/flutuar dos Botões do Menu */
         width: 80px; /* diminui a largura do background */   
     }
     .foto-perfil { /* FOTO DE PERFIL */
-        max-width: 140%; /* tamanho da Foto */
-        margin-left: 150px; /* centraliza a Foto no meio do Container */
-       /* margin-top: 100px; */ /* ajuda a centraliza e dá espaçamento entre a Foto de Perfil e Menu/Data/Hora Atual */
+        max-width: 90%; /* Era 140% - tamanho da Foto */
+        margin-left: -10px; /* Era 150px - centraliza a Foto no meio do Container */
+        margin-top: 100px; /* Era 100px - Estava DESATIVADA - ajuda a centraliza e dá espaçamento entre a Foto de Perfil e Menu/Data/Hora Atual */
     }
     .jumbotron { /* CERTIFICADOS - ficaram maiores no Modo Responsivo */
         margin-left: -130px; /* ajuda o CERTIFICADO ficar maior */
@@ -273,6 +272,11 @@ botaoMenu:hover { /* animação/flutuar dos Botões do Menu */
     .btn-group .btn{ /* MEUS PROJETOS - Botões para ir para Meus Outros Projetos */
         font-size: xx-small;
         max-width: 85px ;
+    }
+    .recuo { /* Foto de Perfil/Resumo de Qualificações/Objetivo  */
+        margin-top: -800px; /* encobre a Section Anterior idêntica a Foto de Perfil/Resumo de Qualificações/Objetivo */
+        margin-left: -820px; /* centraliza o Box Resumo de Qualificações/Objetivo do lado da Foto de Perfil, no meio do Container */
+        max-width: 950px; /* tamanho do Box Resumo de Qualificações/Objetivo */
     }
 }
 
