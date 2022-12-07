@@ -173,17 +173,21 @@
 @media all and (min-width: 40.063em) and (max-width: 63.938em) { /* Tamanho máximo do Container de Textos */
     /* PARALLAX 1 - Ferrovia */
     .foto-paralaxx-1 { /* Paralaxx 1 - PARTE 1 - Ferrovia */        
-        background-size: 100vh; /* ajusta a imagem com altura de 100% da Tela
+        /* background-size: 100vh; */ /* ajusta a imagem com altura de 100% da Tela
                                         mas no Modo Responsivo deixa um vão entre o Parallax e o 
                                         Menu abaixo */
-    }
+        height: 100vh; /* será responsiva e ocupará toda a altura da Tela */
+        /* width: 100%;  *//* largura da Tela */
+    } 
     .foto-paralaxx-1:after{ /* Paralaxx 1 - PARTE 1 - Ferrovia (NÉVOA/sombreamento) */
-        padding-bottom: 736px; /* preenchimento do efeito NÉVOA/sombreamento até o Menu */
-        height: 0%; /* a altura PRECISA ser 0(zero) para o efeito NÉVOA/sombreamento 
-                       ficar rente ao Menu de Navegação em qualquer tipo de Celular/Mobile */   
+        /* padding-bottom: 336px; */ /* Era 736px - preenchimento do efeito NÉVOA/sombreamento até o Menu */
+        /* background-color: 0%;  *//* Era 0% - a altura PRECISA ser 0(zero) para o efeito NÉVOA/sombreamento 
+                                    ficar rente ao Menu de Navegação em qualquer tipo de Celular/Mobile */   
+        position: relative; /* retira o efeito NÉVOA/sombreamento do Primeiro Parallax 
+                            e deixa o Parallax 100vh da Tela*/
     }
     /* PARALLAX 2 - Histórico Profissional */
-    .foto-paralaxx-2 { /* Paralaxx 2 - PARTE 3 - Histórico Profissional */
+    foto-paralaxx-2 { /* Paralaxx 2 - PARTE 3 - Histórico Profissional */
         background-attachment:scroll; /* ESTE É O MELHOR COMANDO - pois fixa a imagem no tamanho real, porém perde-se o Parallax
                                         LOCAL/SCROLL - fixa a imagem no tamanho real, mas perde-se o Parllax                        
                                         FIXED - o Paralaxx funciona, pois por padrão todas as imagens vem por Scroll */
@@ -191,8 +195,8 @@
     /* PARALLAX 3 - Formação Acadêmica */
     .foto-paralaxx-3 { /* Paralaxx 3 - PARTE 4 - Formação Acadêmica */
         background-attachment:scroll; /* ESTE É O MELHOR COMANDO - pois fixa a imagem no tamanho real, porém perde-se o Parallax
-        LOCAL/SCROLL - fixa a imagem no tamanho real, mas perde-se o Parllax                        
-        FIXED - o Paralaxx funciona, pois por padrão todas as imagens vem por Scroll */
+                                        LOCAL/SCROLL - fixa a imagem no tamanho real, mas perde-se o Parllax                        
+                                        FIXED - o Paralaxx funciona, pois por padrão todas as imagens vem por Scroll */
     }
     /* PARALLAX 4 - Certificados */
     .foto-paralaxx-4 { /* Paralaxx 4 - PARTE 5 - Certificados */
