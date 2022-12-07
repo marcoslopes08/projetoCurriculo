@@ -274,9 +274,12 @@ botaoMenu:hover { /* animação/flutuar dos Botões do Menu */
         max-width: 85px ;
     }
     .recuo { /* Foto de Perfil/Resumo de Qualificações/Objetivo  */
-        margin-top: -800px; /* encobre a Section Anterior idêntica a Foto de Perfil/Resumo de Qualificações/Objetivo */
+        margin-top: -770px; /* encobre a Section Anterior idêntica a Foto de Perfil/Resumo de Qualificações/Objetivo */
         margin-left: -820px; /* centraliza o Box Resumo de Qualificações/Objetivo do lado da Foto de Perfil, no meio do Container */
         max-width: 950px; /* tamanho do Box Resumo de Qualificações/Objetivo */
+    }
+    .col-xs-12 { /* Paralaxx 1 - PARTE 1 - Esta é a versão website do meu... */
+        font-size: 1.8em; /* aumenta o tamanho da Fonte */
     }
 }
 
