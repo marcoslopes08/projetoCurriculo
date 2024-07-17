@@ -148,12 +148,13 @@ botaoMenu:hover { /* animação/flutuar dos Botões do Menu */
 }
 
 .bloco-formacao-academica img {
-    max-height: 250px; /* altura da Foto */
+    max-height: 170px; /* Era 250px - altura da Foto */
+    min-height: 250px; /* altura mínima que a Foto deve ter dentro do Box */
     width: 100%; /* largura da Foto */
     align-content: center; /* centraliza as Fotos dentro do Box */
     border-radius: 3px; /* bordas arredondadas das Fotos */
     margin-top: 15px; /* espaçamento entre as Fotos e o Texto dentro do Box */
-    object-fit: cover; /* adapta a imagem dentro do Box quando a Tela for minimizada, fica responsivo */
+    object-fit: cover; /* adapta a imagem dentro do Box, sem este comando a Foto fica desfocada */
 }
 
 .textoBranco {
@@ -179,6 +180,12 @@ botaoMenu:hover { /* animação/flutuar dos Botões do Menu */
     margin-bottom: -30px; /* retira o espaçamento que já vem por padrão no jumbotron */
     align-items: center; /* centraliza na horizoltal todos os itens dentro do Container */
     justify-content: center; /* centraliza tudo */
+}
+
+table {
+    table-layout: fixed; /* fixed faz as Colunas terem sempre o mesmo tamanho */
+    width: 1000px; /* tamanho máximo que cada coluna vai ter na Tabela */
+    margin-left: 17px; /* alinha a Tabela com o Título INTERPRETADORES QUE UTILIZO (IDEs): */
 }
 
 .paragrafo-fundo-espelhado { 
@@ -242,27 +249,38 @@ botaoMenu:hover { /* animação/flutuar dos Botões do Menu */
     .navbar-nav .navegar-entre-paginas { /* PRIMEIRO MENU */
         font-size: 9px; /* diminui o tamanho da fonte dentro dos Botões do Menu */
         width: 80px; /* diminui a largura do background */   
+        /*margin-top: -65px;*/
     }
     .foto-perfil { /* FOTO DE PERFIL */
         max-width: 90%; /* Era 140% - tamanho da Foto */
-        margin-left: -10px; /* Era 150px - centraliza a Foto no meio do Container */
-        margin-top: 100px; /* Era 100px - Estava DESATIVADA - ajuda a centraliza e dá espaçamento entre a Foto de Perfil e Menu/Data/Hora Atual */
+        margin-left: -10px; /* Era 150px - centraliza a Foto em cima do Nome e Sobrenome */
+        margin-top: 200px; /* Era 220px, Era 100px - Estava DESATIVADA - ajuda a centraliza e dá espaçamento entre a Foto de Perfil e Menu/Data/Hora Atual */
     }
     .jumbotron { /* CERTIFICADOS - ficaram maiores no Modo Responsivo */
         margin-left: -130px; /* ajuda o CERTIFICADO ficar maior */
         margin-right: -130px; /* ajuda o CERTIFICADO ficar maior */
     }
-    .card-body .text-primary{ /* FORMAÇÃO ACADÊMICA - Nome do Curso */
+    .card-body .text-primary{ /* FORMAÇÃO ACADÊMICA - Pós-graduação, Graduação, Técnico */
         font-size: small; /* diminui tamanho da Fonte */
+        margin-left: -5px; /* alinha Nome da Faculdade com Nome do Curso */
+        margin-bottom: 10px; /* espaçamentro entre Pós-graduação e UFABC */
+    }
+    .card-body .responsivo{ /* FORMAÇÃO ACADÊMICA - Sistemas de Informação, Comércio Exterior, Finanças */
+       margin-left: -18px; /* alinha Nome da Faculdade com Nome do Curso */
+       font-size: x-small; /* diminui tamanho da Fonte */
     }
     .card-body p{ /* FORMAÇÃO ACADÊMICA - Nome da Faculdade */
         font-size: x-small; /* diminui tamanho da Fonte */
-        margin-left: -15px; /* alinha Nome da Faculdade com Nome do Curso */
+        margin-left: -18px; /* alinha Nome da Faculdade com Nome do Curso */
     }
-    .bloco-formacao-academica img { /* FORMAÇÃO ACADÊMICA - Fotos dentro dos 2 Boxes */
-        height: 150px; /* ajuda na altura igual das Fotos no Modo Responsivo */
+    .bloco-formacao-academica img { /* FORMAÇÃO ACADÊMICA - Fotos dentro dos 3 Boxes */
+        min-height: 150px; /* altura mínima que a Foto deve ter dentro do Box */
     }
-    .card-img-top{ /* MEUS PROJETOS */
+    .col-md-12 table{ /* FORMAÇÃO ACADÊMICA - Box INTERPRETADORES QUE UTILIZO (IDEs): */
+        font-size: 0.8em; /* tamanho da Fonte */
+        width: 850px; /* largura máxima das Colunas dentro da Tabela */
+    }
+    .card-img-top { /* MEUS PROJETOS */
         object-fit: cover; /* sem este comando as Fotos ficam desfocadas dentro dos Cards */
         max-height: 190px; /* altura máxima das Fotos dentro dos Cards */
     }
@@ -274,9 +292,10 @@ botaoMenu:hover { /* animação/flutuar dos Botões do Menu */
         max-width: 85px ;
     }
     .recuo { /* Foto de Perfil/Resumo de Qualificações/Objetivo  */
-        margin-top: -770px; /* encobre a Section Anterior idêntica a Foto de Perfil/Resumo de Qualificações/Objetivo */
-        margin-left: -820px; /* centraliza o Box Resumo de Qualificações/Objetivo do lado da Foto de Perfil, no meio do Container */
-        max-width: 950px; /* tamanho do Box Resumo de Qualificações/Objetivo */
+        margin-top: -940px; /* Era -930px, Era -770px encobre a Section Anterior idêntica a Foto de Perfil/Resumo de Qualificações/Objetivo */
+        margin-left: -810px; /* centraliza o Box Resumo de Qualificações/Objetivo do lado da Foto de Perfil, no meio do Container */
+        min-width: 950px; /* Era MAX-width: 950px, mudei pra MINIMO - tamanho do Box Resumo de Qualificações/Objetivo */
+        margin-bottom: -20px; /* retira espaço entre OBJETIVO e section abaixo */
     }
     .col-xs-12 { /* Paralaxx 1 - PARTE 1 - Esta é a versão website do meu... */
         font-size: 1.8em; /* aumenta o tamanho da Fonte */
