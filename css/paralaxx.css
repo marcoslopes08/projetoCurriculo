@@ -13,19 +13,22 @@
     -webkit-background-size: cover; /* garante o funcionamento do Paralaxx no Chrome e Safari */
     -moz-background-size: cover; /* garante o funcionamento do Paralaxx no Mozilla */
     -o-background-size: cover; /* garante o funcionamento do Paralaxx no Ópera */
+
 }
 
 .foto-paralaxx-1:after { /* Efeito sombreado na parte inferior do Paralaxx */
     content: ""; /* nenhum texto será escrito, por isso conteúdo vazio apenas para garantir que a sombra terá um COMEÇO e FIM */
-    margin-top: -35px; /* espaçamento negativo, evita que o sombreamento fique em cima do Menu de Navegação */    
-    height: 111.9%; /* 111.8% o efeito sombreado vai começar a partir da frase "APRECIE A JORNADA" até o fim da Foto */
+    margin-top: -17.6px; /* Era -17.5px, Era -35px - espaçamento negativo, evita que o sombreamento fique em cima do Menu de Navegação */    
+    height: 111.9%; /* 111.8% o efeito sombreado vai começar a partir do botão "APRECIE" até o fim da Foto */
     width: 100%; /* o efeito sombreado vai pegar a largura de 100% da Tela, da margem Direita até a Esquerda */
-    position: absolute; /* o efeito sombreado terá uma posição fixa dentro da FOTO */
+    position:absolute; /* o efeito sombreado terá uma posição fixa dentro da FOTO */
     z-index: 1; /* era 8 - faz o efeito sombreado ficar sobre a Foto */
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 5%, white 100%); /* color: #ece7d5 (cor Bege-claro - efeito nevoeiro) - efeito sombreado sobre a FOTO */
-    background: -moz-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 5%, white 100%); /* efeito sombreado sobre a FOTO no Mozilla*/
-    background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 5%, white 100%); /* efeito sombreado sobre a FOTO no Chrome e Safari */
-    background: -o-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 5%, white 100%); /* efeito sombreado sobre a FOTO no Ópera */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 5%, rgba(249, 249, 249, 0.79) 100%); /* color: #ece7d5 (cor Bege-claro - efeito nevoeiro) - efeito sombreado sobre a FOTO */
+    background: -moz-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 5%, rgba(249, 249, 249, 0.79) 100%); /* efeito sombreado sobre a FOTO no Mozilla*/
+    background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 5%, rgba(249, 249, 249, 0.7) 100%); /* efeito sombreado sobre a FOTO no Chrome e Safari */
+    background: -o-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 5%, rgba(249, 249, 249, 0.79) 100%); /* efeito sombreado sobre a FOTO no Ópera */
+    
+    /* Era white - a cor rgba(249, 249, 249, 0.79) é idêntica ao background do nav-bar */
 }
 
 .foto-paralaxx-2 { /* Paralaxx 2 - PARTE 3 - Histórico Profissional */
@@ -173,11 +176,11 @@
 @media all and (min-width: 40.063em) and (max-width: 63.938em) { /* Tamanho máximo do Container de Textos */
     /* PARALLAX 1 - Ferrovia */
     .foto-paralaxx-1 { /* Paralaxx 1 - PARTE 1 - Ferrovia */        
-        /* background-size: 100vh; */ /* ajusta a imagem com altura de 100% da Tela
+        /*background-size: 100vh;*/ /* ajusta a imagem com altura de 100% da Tela
                                         mas no Modo Responsivo deixa um vão entre o Parallax e o 
                                         Menu abaixo */
         height: 100vh; /* será responsiva e ocupará toda a altura da Tela */
-        /* width: 100%;  *//* largura da Tela */
+        /*width: 100%;*/ /* largura da Tela */
     } 
     .foto-paralaxx-1:after{ /* Paralaxx 1 - PARTE 1 - Ferrovia (NÉVOA/sombreamento) */
         /* padding-bottom: 336px; */ /* Era 736px - preenchimento do efeito NÉVOA/sombreamento até o Menu */
@@ -187,17 +190,24 @@
                             e deixa o Parallax 100vh da Tela*/
     }
     /* PARALLAX 2 - Histórico Profissional */
-    foto-paralaxx-2 { /* Paralaxx 2 - PARTE 3 - Histórico Profissional */
+    .foto-paralaxx-2 { /* Paralaxx 2 - PARTE 3 - Histórico Profissional */
         background-attachment:scroll; /* ESTE É O MELHOR COMANDO - pois fixa a imagem no tamanho real, porém perde-se o Parallax
                                         LOCAL/SCROLL - fixa a imagem no tamanho real, mas perde-se o Parllax                        
                                         FIXED - o Paralaxx funciona, pois por padrão todas as imagens vem por Scroll */
+        /*background-size: contain;*/ /* contain faz o Paralaxx funcionar, mas deixa um espaço vazio 
+                                    que eu não consegui retirar, mesmo usando: 
+                                    marging-top: -100px
+                                    marging-bottom: -100px */
+                                        /*height: 50vh; /* 100vh = a Página ocupa a Tela inteira do celular */
+        /*width: 50vh; /* 100vh = a Página ocupa a Tela inteira do celular */
     } 
     /* PARALLAX 3 - Formação Acadêmica */
     .foto-paralaxx-3 { /* Paralaxx 3 - PARTE 4 - Formação Acadêmica */
         background-attachment:scroll; /* ESTE É O MELHOR COMANDO - pois fixa a imagem no tamanho real, porém perde-se o Parallax
                                         LOCAL/SCROLL - fixa a imagem no tamanho real, mas perde-se o Parllax                        
-                                        FIXED - o Paralaxx funciona, pois por padrão todas as imagens vem por Scroll */
+                                        FIXED - o Paralaxx funciona, pois por padrão todas as imagens vem por Scroll */ 
     }
+    
     /* PARALLAX 4 - Certificados */
     .foto-paralaxx-4 { /* Paralaxx 4 - PARTE 5 - Certificados */
         background-attachment:scroll; /* ESTE É O MELHOR COMANDO - pois fixa a imagem no tamanho real, porém perde-se o Parallax
@@ -450,6 +460,3 @@ projetos-6-Passatempo
 
     <a href="https://imgbox.com/xqE7BC2m" target="_blank"><img src="https://thumbs2.imgbox.com/b2/9a/xqE7BC2m_t.jpg" alt="image host"/></a>
      */
-
-
-
