@@ -1115,11 +1115,12 @@
     <script src="java/carrossel.js"></script>
 
 	<!-- javascript evita que navegadores mais antigos abram abas maliciosas com target="_blank" -->
-    <script>
+	<!-- Retirei esse JavaScript porque ele abria Página em Branco, como se fosse erro no browser -->
+    <!--<script>
         var otherWindow = window.open();
         otherWindow.opener = null;
         otherWindow.location = url;
-    </script>
+    </script>-->
 
 	<!-- JavaScript para detectar Touch Screen no Mobile, modo responsivo -->
     <script>
